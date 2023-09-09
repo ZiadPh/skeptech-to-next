@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.61.3",
+    "@react-three/fiber": "^8.12.0",
+    "@react-three/postprocessing": "^2.7.1",
+    "glslify": "^7.1.1",
+    "gsap": "^3.11.4",
+    "next": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.3",
+    "react-locomotive-scroll": "^0.2.2",
+    "react-use-clock": "^0.0.4",
+    "sass": "^1.66.1",
+    "scss": "^0.2.4",
+    "three": "^0.151.2",
+    "tslib": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
+  }
+}

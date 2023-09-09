@@ -1,0 +1,69 @@
+@import '../styles/variables.scss';
+.hero-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+}
+.img-container{
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    left: 24vw;
+    width: 40vw;
+    object-fit: cover;
+
+}
+.right{
+    margin-top: 30vh;
+    z-index: 1;
+    margin-left: 10vw;
+    max-width: 90vw;
+}
+.case{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+// .music{
+//     position: fixed;
+//      bottom: 1rem;
+//      left: 2rem;
+// }
+.title{
+    color: $primary-color;
+    font-size: clamp(48px, 14vw, 320px);
+    margin-bottom: 2rem;
+    opacity: 0;
+    text-transform: uppercase;
+    transform: translateY(100px);
+    font-weight: bold;
+}
+
+.quote{
+    color: $primary-color;
+    font-size: clamp(12px, 4vw, 40px);
+    opacity: 0;
+    transform: translateY(100px);
+    letter-spacing: 7px;
+}
+.highlight{
+    color: $highlight-color;
+}
+.hey{
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /* 
+      Device = Most of the Smartphones Mobiles (Portrait)
+      Screen = 320px to 479px
+    */
+
+    .quote{
+        letter-spacing: 0;
+        max-width: 85vw;
+    }
+  }
