@@ -6,7 +6,7 @@ import GallerSkep from '../assets/GallerySkep.png'
 import laptop from '../assets/laptop.png'
 import CK from '../assets/CK.png'
 import Image from 'next/image'
-
+import Link from 'next/link'
 const projects = React.forwardRef((props, ref) => {
   const refff = useRef(null)
   
@@ -42,7 +42,7 @@ const projects = React.forwardRef((props, ref) => {
   
       name: 'DevMohamed Portofolio',
       url: DevMo,
-      link: 'https://devmohamed.netlify.app/',
+      link: '/devMo',
       dTitle: 'DEV / UX / 3D',
       description: 'This was one of the first projects in skeptech that we were proud to execute using 3D design and implementation through blender and three.js to create this immersive CV experience using visual storytelling'
     },
@@ -63,7 +63,7 @@ const projects = React.forwardRef((props, ref) => {
     {
       name: 'Pixel10 Studio',
       url: GallerSkep,
-      link: 'https://www.behance.net/gallery/176988473/Pixel10-Studio-Website-Design',
+      link: '/pixel11',
       dTitle: 'DEV / UX',
       description: 'Pixel10 Studio website is considered our very first commercial project which we take pride in participating to help a fellow creative studio to curate and showcase their work on the internet.'
     }
@@ -78,14 +78,14 @@ const projects = React.forwardRef((props, ref) => {
             <div className="project" key={index}>
               <ul>
                 <li>
-                  <a className='tdn' href={project.link} target='blank'> 
+                  <Link className='tdn' href={project.link} > 
                     <span className="project-name">
                       <span className='project-number'>
                         #0{index+1}
                       </span>
                       {project.name} 
                     </span>
-                  </a>
+                  </Link>
                     <Image className='image' src={project.url} />
                   <div className="projects-description"data-scroll data-scroll-sticky data-scroll-target="#projects-container">
                     <div className="project-title">{project.dTitle}</div><div className="project-desc">

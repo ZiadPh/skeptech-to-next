@@ -2,10 +2,10 @@ import React from 'react'
 import App from './index'
 import '../styles/index.scss'
 
-export default function Home() {
+export default function Home({ Component, pageProps, router }) {
   return (
-    <React.StrictMode>
-    <App />
-  </React.StrictMode>
+      <Component key={router.pathname} {...pageProps} />
+
   );
 }
+
