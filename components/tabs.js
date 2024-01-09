@@ -9,15 +9,18 @@ const Tabs = ({ tabs, contents }) => {
   };
 
   return (
-    <div className={styles.tabsContainer}>
-      <div className={styles.tabs}>
+    <div className='tabsContainer'>
+      <div className='tabs'>
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`${styles.tab} ${index === activeTab ? styles.activeTab : ''}`}
+            className={`${styles.tab} ${styles[`tab${index + 1}`]} ${
+              index === activeTab ? styles.activeTab : ''
+            }`}
             onClick={() => handleTabClick(index)}
           >
             {tab}
+            <div className={styles.bottomLine}></div>
           </div>
         ))}
       </div>
