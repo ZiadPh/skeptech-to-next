@@ -4,6 +4,7 @@ import { useRef, useEffect} from 'react'
 import DevMo from '../assets/devMo.png'
 import GallerSkep from '../assets/GallerySkep.png'
 import laptop from '../assets/laptop.png'
+import ehab from '../assets/ehabSquared.png'
 import CK from '../assets/CK.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -67,9 +68,9 @@ const projects = React.forwardRef((props, ref) => {
   const videos = [
     {
   
-      name: 'Ehab Ehab',
-      url: DevMo,
-      link: '/devMo',
+      name: 'Exhausted by Fumes and Drivers',
+      url: ehab,
+      link: '/ehabSquared',
       dTitle: 'Cinematography / VFX',
       description: 'This was one of the first projects in skeptech that we were proud to execute using 3D design and implementation through blender and three.js to create this immersive CV experience using visual storytelling'
     },
