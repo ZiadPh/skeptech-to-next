@@ -9,10 +9,13 @@ import CK from '../assets/CK.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import Tabs from './tabs'
+import { useRouter } from 'next/router';
+
 
 const projects = React.forwardRef((props, ref) => {
   const refff = useRef(null)
-  
+  const router = useRouter();
+  const { projectss } = router.query;
   useEffect(() =>{
     const cards = document.querySelectorAll('.project-name')
 
@@ -235,6 +238,7 @@ const projects = React.forwardRef((props, ref) => {
   
   return (
     <div ref={ref} className="projects-wrapper" id="projects-container" data-scroll-section>
+      {projectss}
       <Tabs tabs={tabTitles} contents={tabContents} />
     </div>
   )

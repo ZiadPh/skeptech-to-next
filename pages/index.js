@@ -9,8 +9,7 @@ import Services from '../components/services'
 import Contact from '../components/contactus'
 import {useEffect, useRef, useState} from 'react'
 import ThreeCanvas from '../components/Canvas3d'
-
-
+import Link from 'next/link';
 
 
 
@@ -98,6 +97,7 @@ const App = () => {
   const [preloader, setPreloader] = useState(true)
   const [timer,setTimer] = useState(3)
 
+//Routings
 
  
   return (
@@ -127,13 +127,13 @@ const App = () => {
        
       > */}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-<link rel="preconnect" href="https://fonts.gstatic.com"></link>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         <main data-scroll-container ref={containerRef}>
             <ThreeCanvas scrollProgress={scrollTop} />
             <Nav scrollToSection={scrollToSection} />
             <Hero ref={section4Ref} />
-            <Projects ref={section1Ref}/>
+            <Projects ref={section1Ref} />
             <About ref={section2Ref} />
             <Services/>
             <Contact ref={section3Ref}/>

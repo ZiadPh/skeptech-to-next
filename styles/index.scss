@@ -49,6 +49,12 @@ body {
     overflow-x: hidden;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+    :-webkit-scrollbar {
+        display: none;
+      }
+      
 }
 
 ol, ul {
