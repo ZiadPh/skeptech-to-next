@@ -132,7 +132,7 @@ const projects = React.forwardRef((props, ref) => {
   ];
     const tabContents = [
             //-----------------------------------------------------------------------------------------------
-      <div className="project-container" >
+      <div className="project-container"  >
         
         <div  className="projects-title"><span className='projects-number'>#00</span> Projects</div>
         {
@@ -237,10 +237,10 @@ const projects = React.forwardRef((props, ref) => {
     ];      //-----------------------------------------------------------------------------------------------
   
   return (
-    <div ref={ref} className="projects-wrapper" id="projects-container" data-scroll-section>
-      {projectss}
-      <Tabs tabs={tabTitles} contents={tabContents} />
-    </div>
+      <div ref={ref} className="projects-wrapper" id="projects" data-scroll-section>
+        {projectss}
+        <Tabs tabs={tabTitles} contents={tabContents} />
+      </div>
   )
 })
 

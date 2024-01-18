@@ -15,7 +15,7 @@ const ContactUs = React.forwardRef<HTMLDivElement>((props, ref) => {
     })
   },[])
   return (
-    <div ref={ref} className="contact-wrapper" data-scroll-section>
+    <div ref={ref} className="contact-wrapper" id='contact' data-scroll-section>
         <div className="contact-container">
             <div ref={title} className="contact-title">
                 Have a <br/>Project <br/>Idea? 

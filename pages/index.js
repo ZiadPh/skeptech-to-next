@@ -9,7 +9,7 @@ import Services from '../components/services'
 import Contact from '../components/contactus'
 import {useEffect, useRef, useState} from 'react'
 import ThreeCanvas from '../components/Canvas3d'
-import Link from 'next/link';
+
 
 
 
@@ -17,56 +17,11 @@ import Link from 'next/link';
 //Render Function
 const App = () => {
 
-  //Scroll Refs and Function
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
-  const section4Ref = useRef(null);
+
+
+
  
-  
-
-
-  const scrollToSection = (target) => {
-    switch (target) {
-      case 'section1':
-        if (section1Ref && section1Ref.current) {
-          section1Ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-        break;
-      case 'section2':
-        if (section2Ref && section2Ref.current) {
-          section2Ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-        break;
-        case 'section3':
-        if (section3Ref && section3Ref.current) {
-          section3Ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-        break;
-        case 'section4':
-          if (section4Ref && section4Ref.current) {
-            section4Ref.current.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
-          }
-          break;
-      // Add cases for other sections if needed
-      default:
-        break;
-    }
-  };
-
-  //Scroll Function
+  //Canvas Scroll Function
   const [scrollTop, setScrollTop] = useState(0);
   
   const onScroll = () => {
@@ -97,9 +52,6 @@ const App = () => {
   const [preloader, setPreloader] = useState(true)
   const [timer,setTimer] = useState(3)
 
-//Routings
-
- 
   return (
     <> 
 
@@ -131,12 +83,12 @@ const App = () => {
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         <main data-scroll-container ref={containerRef}>
             <ThreeCanvas scrollProgress={scrollTop} />
-            <Nav scrollToSection={scrollToSection} />
-            <Hero ref={section4Ref} />
-            <Projects ref={section1Ref} />
-            <About ref={section2Ref} />
-            <Services/>
-            <Contact ref={section3Ref}/>
+            <Nav />
+            <Hero />
+              <Projects />
+            <About />
+            <Services />
+            <Contact />
              
         </main>
       {/* </LocomotiveScrollProvider> */}
