@@ -9,9 +9,21 @@ import Services from '../components/services'
 import Contact from '../components/contactus'
 import {useEffect, useRef, useState} from 'react'
 import ThreeCanvas from '../components/Canvas3d'
+import { useRouter } from 'next/router';
 
 
+// Custom hook to get the current page
+const useCurrentPage = () => {
+  const router = useRouter();
+  const [currentPage, setCurrentPage] = useState('');
 
+  useEffect(() => {
+    // Update the state with the current page when the route changes
+    setCurrentPage(router.pathname);
+  }, [router.pathname]);
+
+  return currentPage;
+};
 
 
 //Render Function
@@ -19,6 +31,9 @@ const App = () => {
 
 
 
+
+
+const currentPage = useCurrentPage();
 
  
   //Canvas Scroll Function
@@ -43,7 +58,7 @@ const App = () => {
   
 
 
-
+  
   //LocomotiveScroll
   const id = useRef(null)
   const containerRef = useRef(null)
@@ -51,6 +66,9 @@ const App = () => {
   //Preloader
   const [preloader, setPreloader] = useState(true)
   const [timer,setTimer] = useState(3)
+
+
+
 
   return (
     <> 
@@ -83,7 +101,7 @@ const App = () => {
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         <main data-scroll-container ref={containerRef}>
             <ThreeCanvas scrollProgress={scrollTop} />
-            <Nav />
+            <Nav currentPage={currentPage} />
             <Hero />
               <Projects />
             <About />

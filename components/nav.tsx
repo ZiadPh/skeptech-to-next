@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 
 
-const Nav = ({  }) => {
+const Nav = ({ currentPage }) => {
 
   const clock = useClock()
 
 
   return (
     <div className='nav'>
-        <Link href='#main' className="stack" >
+        <Link href={ currentPage === "/" ? "#main" : "../#main" } className="stack" >
           <span className='index1'>SKEPTECH</span>
           <span className='index2'>SKEPTECH</span>
           <span className='index3'>SKEPTECH</span>
@@ -25,9 +25,9 @@ const Nav = ({  }) => {
           
           -&nbsp;&nbsp;LIVERPOOL, UK (BST)   <span className='lowlight'>©2022</span></div>
         <ul className="pages">
-            <li><Link href="#projects" className='projects-nav' >PROJECTS</Link></li>
-            <li><Link href="#about" className='about-nav' >ABOUT US</Link></li>
-            <li><Link href="#contact" className='contact-nav' >CONTACT</Link></li>
+            <li><Link href={ currentPage === "/" ? "#projects" : "../#projects" } className='projects-nav' ><button>PROJECTS</button></Link></li>
+            <li><Link href={ currentPage === "/" ? "#about" : "../#about" } className='about-nav' ><button>ABOUT US</button></Link></li>
+            <li><Link href={ currentPage === "/" ? "#contact" : "../#contact" } className='contact-nav' ><button>CONTACT</button></Link></li>
         </ul>
     </div>
   )
