@@ -10,8 +10,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Tabs from './tabs'
 
-const projects = React.forwardRef((props, ref) => {
-
+const projects = React.forwardRef((props, ref ) => {
+  //Pass the handletab click props
+  const tabProps = props
   //projects reveal animation 
   useEffect(() =>{
     const cards = document.querySelectorAll('.project-name')
@@ -236,7 +237,7 @@ const projects = React.forwardRef((props, ref) => {
   
   return (
       <div ref={ref} className="projects-wrapper" id="projects" data-scroll-section>
-        <Tabs tabs={tabTitles} contents={tabContents} />
+        <Tabs tabs={tabTitles} contents={tabContents} tabProps={tabProps} />
       </div>
   )
 })

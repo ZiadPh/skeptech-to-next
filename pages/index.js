@@ -10,6 +10,7 @@ import Contact from '../components/contactus'
 import {useEffect, useRef, useState} from 'react'
 import ThreeCanvas from '../components/Canvas3d'
 import { useRouter } from 'next/router';
+import { useSpring, animated } from 'react-spring';
 
 
 // Custom hook to get the current page
@@ -30,8 +31,41 @@ const useCurrentPage = () => {
 
 
 //Render Function
+
 const App = () => {
 
+  //Tab Categories props
+  const [activeTab, setActiveTab] = useState(0);
+  const [contentVisible, setContentVisible] = useState(true);
+  const [currentColor, setCurrentColor] = useState('#0ea7b5'); // Default color for Tab 1
+  const springProps = useSpring({
+    color: currentColor,
+    config: { duration: 500 }, // Adjust the duration as needed
+  });
+
+  const handleTabClick = (index) => {
+    setContentVisible(false); // Start the fade-out animation
+    setTimeout(() => {
+      setActiveTab(index);
+      setContentVisible(true); // Start the fade-in animation
+    }, 300); // Adjust the timeout based on your transition duration
+    
+    switch (index) {
+      case 0:
+        setCurrentColor('#0ea7b5');
+        break;
+      case 1:
+        setCurrentColor('#ff0000');
+        break;
+      case 2:
+        setCurrentColor('#00ff00');
+        break;
+      default:
+        setCurrentColor('#0ea7b5');
+        break;
+    }
+  };
+  
 //URL Updater
   const main = useRef(null);
   const projects = useRef(null);
@@ -130,10 +164,10 @@ const currentPage = useCurrentPage();
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         <main data-scroll-container ref={containerRef}>
-            <ThreeCanvas scrollProgress={scrollTop} />
+            <ThreeCanvas scrollProgress={scrollTop} clr={springProps.color} />
             <Nav currentPage={currentPage} />
             <Hero ref={main}/>
-              <Projects ref={projects} />
+              <Projects ref={projects} props={[activeTab , contentVisible , handleTabClick]} />
             <About ref={about} />
             <Services />
             <Contact ref={contact} />
