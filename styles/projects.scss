@@ -37,8 +37,7 @@
           }
       }
     .project-container{
-         transition: ease-in-out 0.5s;
-        .projects-title{
+         .projects-title{
             margin-left: 5rem;
             font-size: 12px;
             letter-spacing: 3px;
@@ -145,7 +144,7 @@
  opacity: 0;
  transform: translateY(40px);
 }
-
+ 
 
 @media (min-width: 320px) and (max-width: 680px) {
     /* 

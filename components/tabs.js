@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import styles from '../styles/Tabs.module.css';
 
 const Tabs = ({ tabs, contents }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [contentVisible, setContentVisible] = useState(true);
 
   const handleTabClick = (index) => {
-    setActiveTab(index);
+    setContentVisible(false); // Start the fade-out animation
+    setTimeout(() => {
+      setActiveTab(index);
+      setContentVisible(true); // Start the fade-in animation
+    }, 300); // Adjust the timeout based on your transition duration
   };
+
 
   return (
     <div className='tabsContainer'>
@@ -24,7 +30,7 @@ const Tabs = ({ tabs, contents }) => {
           </div>
         ))}
       </div>
-      <div className={styles.content}>{contents[activeTab]}</div>
+      <div className={`${styles.content} ${contentVisible ? styles.fadeIn : styles.fadeOut}`}>{contents[activeTab]}</div>
     </div>
   );
 };

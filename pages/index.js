@@ -26,10 +26,40 @@ const useCurrentPage = () => {
 };
 
 
+
+
+
 //Render Function
 const App = () => {
 
-
+//URL Updater
+  const main = useRef(null);
+  const projects = useRef(null);
+  const about = useRef(null);
+  const contact = useRef(null);
+  useEffect(() => {
+    const options = {
+      root: null, // Observe the entire viewport
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          window.location.hash = entry.target.id;
+        }
+      });
+    }, options);
+  
+    observer.observe(main.current);
+    observer.observe(projects.current);
+    observer.observe(about.current);
+    observer.observe(contact.current);
+  
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
 
 
@@ -54,7 +84,7 @@ const currentPage = useCurrentPage();
     window.addEventListener("scroll", onScroll);
   
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [scrollTop]);
   
 
 
@@ -102,11 +132,11 @@ const currentPage = useCurrentPage();
         <main data-scroll-container ref={containerRef}>
             <ThreeCanvas scrollProgress={scrollTop} />
             <Nav currentPage={currentPage} />
-            <Hero />
-              <Projects />
-            <About />
+            <Hero ref={main}/>
+              <Projects ref={projects} />
+            <About ref={about} />
             <Services />
-            <Contact />
+            <Contact ref={contact} />
              
         </main>
       {/* </LocomotiveScrollProvider> */}

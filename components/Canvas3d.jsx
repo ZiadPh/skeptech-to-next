@@ -130,7 +130,7 @@ function Model(props) {
         material={material}
       />
     </group>
-  );
+  )
 }
 
 useGLTF.preload("/dna-03.glb");

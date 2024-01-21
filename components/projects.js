@@ -9,13 +9,10 @@ import CK from '../assets/CK.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import Tabs from './tabs'
-import { useRouter } from 'next/router';
-
 
 const projects = React.forwardRef((props, ref) => {
-  const refff = useRef(null)
-  const router = useRouter();
-  const { projectss } = router.query;
+
+  //projects reveal animation 
   useEffect(() =>{
     const cards = document.querySelectorAll('.project-name')
 
@@ -220,7 +217,8 @@ const projects = React.forwardRef((props, ref) => {
                     </Link>
                       <Image className='image' src={ARVR.url} />
                     <div className="projects-description"data-scroll data-scroll-sticky data-scroll-target="#projects-container">
-                      <div className="project-title">{ARVR.dTitle}</div><div className="project-desc">
+                      <div className="project-title">{ARVR.dTitle}</div>
+                      <div className="project-desc">
                         {ARVR.description}
                       </div>
                     </div>
@@ -238,7 +236,6 @@ const projects = React.forwardRef((props, ref) => {
   
   return (
       <div ref={ref} className="projects-wrapper" id="projects" data-scroll-section>
-        {projectss}
         <Tabs tabs={tabTitles} contents={tabContents} />
       </div>
   )
