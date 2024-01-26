@@ -61,12 +61,14 @@
         li{
             margin-left: calc(6vw - 20px);
             opacity: .5;
-            transition: .5s ease;
+            transition: .5s ease;    
+            color: #c6c2bb;
             .project-name{
                display: flex;
                 font-size: clamp(20px, 3vw, 5vw);
                 letter-spacing: 3px;
                 font-weight: 200;
+
             }
             .project-number{
                 align-self: flex-start;

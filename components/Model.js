@@ -14,7 +14,6 @@ function Model(props) {
     //------------------(The Shader)-----------------
     const number = 662742;
     const clr = props.clr
-    console.log(clr)
     const randoms = new Float32Array (number /3);
     const colorRandoms = new Float32Array (number /3);
     for(var i = 0; i < number / 3; i++) {
