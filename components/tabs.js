@@ -1,9 +1,9 @@
 import styles from '../styles/Tabs.module.css';
 const Tabs = ({ tabs, contents , tabProps }) => {
 
-  const activeTab = tabProps[0]
-  const contentVisible = tabProps[1]
-  const handleTabClick = tabProps[2]
+  const activeTab = tabProps.props[0]
+  const contentVisible = tabProps.props[1]
+  const handleTabClick = tabProps.props[2]
   
   return (
     <div className='tabsContainer'>
