@@ -3,7 +3,6 @@ import Image from "next/image"
 import ehab from '../assets/ehabSquared.png'
 import { useState , useEffect } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 
 export default function pixel() {
