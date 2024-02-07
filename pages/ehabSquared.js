@@ -1,9 +1,15 @@
 import Nav from "../components/nav"
 import Image from "next/image"
 import ehab from '../assets/ehabSquared.png'
+import sb from '../assets/StoryBoard.jpg'
+import VFX1 from '../assets/VFX1.png'
+import VFX2 from '../assets/VFX2.png'
+import VFX3 from '../assets/VFX3.png'
 import { useState , useEffect } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
+import { InstagramEmbed } from 'react-social-media-embed';
 
 export default function pixel() {
 
@@ -34,7 +40,7 @@ export default function pixel() {
 return(
     <div className="ehab-wrap">
         <Nav />
-        <m.div
+        <m.div className="sections"
         initial="pageInitial"
         animate="pageAnimate"
         exit="pageExit"
@@ -79,93 +85,74 @@ return(
                             Background:
                         </div>
                         <div>
-                            Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors.
+                            A Visual artist, born in Cairo in 2000, Ehab lives and works in Cairo. He graduated from
+                            Applied Arts in Helwan University,2023. He is interested in practicing visual arts in all its
+                            forms, and experimenting with many materials and techniques such as drawing, painting,
+                            digital painting, sculpture, graffiti and murals, but despite that, most of his production are
+                            paintings. 
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="Section-2">
-                {/* <Image className="gif" src={DMgif} width={viewportSize.width}  alt="PixelGif"/> */}
-            </div>
             <div className="section-3">
                 <div>
-                    <h2>Objectives:</h2>
+                    <h2>Context:</h2>
                     <ul>
                         <li>  {/* #1 */}
                             <span>
-                            Showcase Portfolio:&nbsp;
+                            Artist Statement:&nbsp;
                             </span>
-                            The website should prominently showcase their portfolio of completed projects, allowing visitors to experience the quality and creativity of their work in Architectural Visualisation, Animation, Virtual Reality, and Interior Design.
-                        </li>
+                            <br/> When the sounds race the visual, you end up seeing the fire with a background of deadly silence, or you hear the sound of the crashing before the suicide from the top of the building.
+                            <br/>From a locked room and in between the events but not in them, in a solo clash against the mass, the one and against myself. How to restore a fallen apart city that exists on crumbling grounds? How can you make sure that my statement has meaning and not just artistic pretend? I tend to lose my feelings quite a lot towards this unending war.                        </li>
                         <li> {/* #2 */}
                             <span>
-                            Highlight Services:&nbsp;
+                            Description:&nbsp;
                             </span>
-                            Clearly present their core services, providing detailed information about each service offering, the process involved, and how they add value to clients' projects.                    </li> 
-                        <li> {/* #3 */}
-                            <span>
-                            Enhance User Experience:&nbsp;
-                            </span>
-                            Create an intuitive and user-friendly website interface that enables visitors to navigate effortlessly and find the information they need. The website must be accessible on various devices and browsers.                    </li>
-                        <li> {/* #4 */}
-                            <span>
-                            Generate Leads:&nbsp;
-                            </span>
-                            Incorporate effective call-to-action (CTA) elements throughout the website to encourage potential clients to inquire about their services or request quotes.                    </li>
-                        <li> {/* #5 */}
-                            <span>
-                            Improve Brand Image:&nbsp;
-                            </span>
-                            Reflect the professionalism, creativity, and innovation that Pixel10 Studio brings to each project through the website's design and content.                    </li>
-                        <li> {/* #6 */}
-                            <span>
-                            SEO Optimization:&nbsp;
-                            </span>
-                            Ensure that the website is search engine optimized, enabling better visibility in relevant search results and attracting organic traffic.                    </li>
+                            <br/> In an extremely busy third world city and with complex social conflicts and vicious confrontations, I lose my sense of meaning behind this unending war and clear contradiction between the humane meaning and shocking reality. What is common and why? In whos hands is the power?<br/> And why? Rebelling, is it the answer or the tool? And to what extent is it going to push us?<br/>Does it really matter?          </li>                       
+
                     </ul>
                 </div>
 
             </div>
             <div className="section-4 ">
-                <h1>Client References:</h1>
-                <div className="Carousel">
-                    {/* <Carousel dynamicHeight={true} width={"68%"} >
-                        <div>
-                            <Image src={Cref1} alt="null"/>
-                            <p className="legend">Eleven V visualisation studio</p>
-                        </div>
-                        <div>
-                            <Image src={Cref2} alt="null" />
-                            <p className="legend">Smiling Wolf creative agency</p>
-                        </div>
-                        <div>
-                            <Image src={Cref3} alt="null"/>
-                            <p className="legend">Wow Tapes creative agency</p>
-                        </div>
-                    </Carousel> */}
-                </div>
-
+                <h1>Shot List:</h1>
+                <Image src={sb} />
+                <p>Featuring the proposed storyboard made by Ehab Ehab to illustrate his vision towards the end result</p>
             </div>
+
             <div className="section-5">
-                <div className="s5-wrapper">
-                    <h1>Design Aspects</h1>
-                    
-                    <h2>1. Typography and Fonts</h2>
-                    <div className="fonts">
-                        {/* <Image src={Font1} alt="Null"/>
-                        <Image src={Font2} alt="Null"/> */}
+                    <h1>Behind the Scenes</h1>
+                    <div className="Carousel">
+                        <Carousel dynamicHeight={true} width={viewportSize.width*0.8} >
+                            <div>
+                                <Image src={VFX1} alt="null"/>
+                                <p className="legend">Building the whole 3D scene of his room using a different range of 3D models and Photogrammetry</p>
+                            </div>
+                            <div>
+                                <Image src={VFX2} alt="null" />
+                                <p className="legend">Tracking 9 faces in a 10 seconds footage in an attempt of attaching traffic cones to their heads</p>
+                            </div>
+                             <div>
+                                <Image src={VFX3} alt="null" />
+                                <p className="legend">Simulating the lighting to match the scenes using Blender's generic point lights and shadow catchers</p>
+                            </div>
+                            <div>
+                                <iframe frameborder="0"
+                                allowfullscreen="" 
+                                scrolling="no"
+                                allow="autoplay;fullscreen"
+                                style={{height: "80vh" , width: "100%" , objectFit: 'cover' }}
+                                src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Flh3kp6xiaf44odavlagow%2Ffall.mp4%3Frlkey%3D4obmstgdbxjs64ys3syjn2aa6%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=720p&playButton=false"
+                                 />
+                                <p className="legend">Getting realistic body postures for my 3D character using Mixamo's animation library
+</p>
+                            </div>
+                        </Carousel>
                     </div>
-
-                    <h2>2. Color</h2>
-                    {/* <Image src={Color}/> */}
-
-                    <h2>3. Layout and Prototype</h2>
-                    {/* Figma Embed */}
-                    <iframe className="embed" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrvQX9LdcjoJEjDmwcguS2N%2FPixel-10%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-254%26viewport%3D137%252C449%252C0.11%26t%3DLLV5Di45F6bm9d6C-1%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A254%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
-
-                    <h2>4. Animations and Transitions</h2>
-                    <div className="animation-grid"></div>
-                </div>
+            </div>
+            <div className="section-4 ">
+                <h1>Final Result</h1>
+                <InstagramEmbed url="https://www.instagram.com/p/CleMfhZtcqo/" height={viewportSize.height*0.9} width={viewportSize.width*0.3} />
             </div>
         </m.div>
     </div>
