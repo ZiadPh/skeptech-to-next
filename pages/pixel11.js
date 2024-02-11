@@ -12,6 +12,7 @@ import { useState , useEffect } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
+import Footer from "../components/Footer"
 
 export default function pixel() {
 
@@ -175,6 +176,7 @@ return(
                     <div className="animation-grid"></div>
                 </div>
             </div>
+            <Footer/>
         </m.div>
     </div>
 

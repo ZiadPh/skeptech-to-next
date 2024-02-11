@@ -1,4 +1,5 @@
 import Nav from "../components/nav"
+import Footer from '../components/Footer'
 import Image from "next/image"
 import ehab from '../assets/ehabSquared.png'
 import sb from '../assets/StoryBoard.jpg'
@@ -154,6 +155,7 @@ return(
                 <h1>Final Result</h1>
                 <InstagramEmbed url="https://www.instagram.com/p/CleMfhZtcqo/" height={viewportSize.height*0.9} width={viewportSize.width*0.3} />
             </div>
+            <Footer/>
         </m.div>
     </div>
 

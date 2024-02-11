@@ -86,7 +86,7 @@ const projects = React.forwardRef((props, ref ) => {
     {
       name: 'Skeptech Reveal',
       url: reveal,
-      link: 'https://www.behance.net/gallery/149359567/UX-UI-Mission-Bicycle-Company-Redesign',
+      link: '/reveal',
       dTitle: 'Creative Direction',
       description: 'Mission Bicycles is a custom bicycle store that provides unique and personalized bikes to customers. The company’s website offers a seamless and user-friendly experience, allowing customers to easily browse through various bike models and customize their preferred options. Additionally, the website has a built-in system that allows users to preview their customized bike before placing an order.'
     }
