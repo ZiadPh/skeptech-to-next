@@ -7,6 +7,7 @@ import laptop from '../assets/laptop.png'
 import ehab from '../assets/ehabSquared.png'
 import CK from '../assets/CK.png'
 import reveal from '../assets/rvl.png'
+import turkish from '../assets/Stopmotion.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import Tabs from './tabs'
@@ -78,8 +79,8 @@ const projects = React.forwardRef((props, ref ) => {
     },
     {
       name: 'Turkish Coffee',
-      url: CK,
-      link: 'https://www.behance.net/gallery/142011903/UXUI-Circle-K-Egypt-App-(Unofficial)',
+      url: turkish,
+      link: '/turkish',
       dTitle: 'Stopmotion',
       description: 'Circle K is a dedicated mobile application for coffee ordering. The projects primary goal is to provide a seamless and user-friendly experience for customers to order their coffee quickly and efficiently. The application includes features such as personalized drink customization, multiple payment options, and the ability to save favorite orders for future use. The design also incorporates a loyalty points system, allowing customers to earn rewards and discounts for frequent orders'
     },
@@ -123,9 +124,6 @@ const projects = React.forwardRef((props, ref ) => {
       </div>,
       <div>
         <h2>Video Production</h2>
-      </div>, 
-      <div>
-        <h2>AR / VR</h2>
       </div>
   
   ];
@@ -201,39 +199,39 @@ const projects = React.forwardRef((props, ref ) => {
 
         //-----------------------------------------------------------------------------------------------
 
-          <div className="project-container" >
+          // <div className="project-container" >
                   
-          <div  className="projects-title"><span className='projects-number'>#00</span> Projects</div>
-          {
-            ARVR.map((ARVR, index) =>(
-              <div className="project" key={index}>
-                <ul>
-                  <li>
-                    <Link className='tdn' href={ARVR.link} > 
-                      <span className="project-name">
-                        <span className='project-number'>
-                          #0{index+1}
-                        </span>
-                        {ARVR.name} 
-                      </span>
-                    </Link>
-                      <Image className='image' src={ARVR.url} />
-                    <div className="projects-description"data-scroll data-scroll-sticky data-scroll-target="#projects-container">
-                      <div className="project-title">{ARVR.dTitle}</div>
-                      <div className="project-desc">
-                        {ARVR.description}
-                      </div>
-                    </div>
-                    <div className="dash">
-                    </div>
-                  </li>
-                </ul>
+          // <div  className="projects-title"><span className='projects-number'>#00</span> Projects</div>
+          // {
+          //   ARVR.map((ARVR, index) =>(
+          //     <div className="project" key={index}>
+          //       <ul>
+          //         <li>
+          //           <Link className='tdn' href={ARVR.link} > 
+          //             <span className="project-name">
+          //               <span className='project-number'>
+          //                 #0{index+1}
+          //               </span>
+          //               {ARVR.name} 
+          //             </span>
+          //           </Link>
+          //             <Image className='image' src={ARVR.url} />
+          //           <div className="projects-description"data-scroll data-scroll-sticky data-scroll-target="#projects-container">
+          //             <div className="project-title">{ARVR.dTitle}</div>
+          //             <div className="project-desc">
+          //               {ARVR.description}
+          //             </div>
+          //           </div>
+          //           <div className="dash">
+          //           </div>
+          //         </li>
+          //       </ul>
                 
-              </div>
+          //     </div>
               
-            ))
-          }
-          </div>
+          //   ))
+          // }
+          // </div>
     ];      //-----------------------------------------------------------------------------------------------
   
   return (
