@@ -2,11 +2,11 @@
 .devMo-wrap{
     position: relative;
     background: rgb(37,54,48);
-    background: linear-gradient(90deg, rgba(37,54,48,1) 0%, rgba(48,94,77,1) 50%, rgba(37,54,48,1) 100%);
+    background: linear-gradient(180deg, #141A26 0%, #4A608C 100%);
     width: 100vw;
     color: $primary-color;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-
+    line-height: 1.2;
 
     .section-1{
         display: flex;
@@ -207,6 +207,7 @@
             width: 68%;
             margin: auto;
             margin-top: 8%;
+            margin-bottom: 8%;
             & > h1{
                 font-size: 48px;
                 font-weight: 600;
@@ -216,21 +217,28 @@
                 font-family: 'IBM Plex Mono' , monospace;
                 font-weight: 800;
             }
+            .grid{
+                display: flex;
+                max-width: 80vw;
+                justify-content: center;
+                & > img{
+                    height: 50vh;
+                    width: auto;
+                }
+            }
             .fonts{
                 display: flex;
                 height: auto;
-                width: 100%;
-                justify-content: space-between;
+                justify-content: center;
                 & > img{
                     max-height: 64vh;
+                    max-width: 40vw;
+                    object-fit: cover;
                 }
             }
             & > img{
                 max-height: 80vh;
                 width: auto;
-            }
-            .embed{
-                height:80vh;
             }
         }
     }
