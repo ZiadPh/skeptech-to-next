@@ -1,23 +1,21 @@
 import React from 'react'
 import { useClock } from 'react-use-clock'
-
-interface NavProps {
-  scrollToSection: (target: string) => void;
-}
+import Link from 'next/link';
 
 
-const Nav: React.FC<NavProps> = ({ scrollToSection }) => {
+
+const Nav = ({ currentPage , handleNavigate}) => {
 
   const clock = useClock()
 
 
   return (
     <div className='nav'>
-        <div className="stack"  onClick={() => scrollToSection('section4')}>
+        <Link href={ currentPage === "/" ? "#main" : "../#main" } className="stack" >
           <span className='index1'>SKEPTECH</span>
           <span className='index2'>SKEPTECH</span>
           <span className='index3'>SKEPTECH</span>
-        </div>
+        </Link>
         <div className='clock'>
           <strong>
           {clock.hours.toString().padStart(2, '0')}:
@@ -27,9 +25,9 @@ const Nav: React.FC<NavProps> = ({ scrollToSection }) => {
           
           -&nbsp;&nbsp;LIVERPOOL, UK (BST)   <span className='lowlight'>©2022</span></div>
         <ul className="pages">
-            <li><button className='projects-nav' onClick={() => scrollToSection('section1')}>PROJECTS</button></li>
-            <li><button className='about-nav' onClick={() => scrollToSection('section2')}>ABOUT US</button></li>
-            <li><button className='contact-nav' onClick={() => scrollToSection('section3')}>CONTACT</button></li>
+            <li><Link href={ currentPage === "/" ? "#projects" : "../#projects" } className='projects-nav' ><button onClick={handleNavigate}>PROJECTS</button></Link></li>
+            <li><Link href={ currentPage === "/" ? "#about" : "../#about" } className='about-nav' ><button>ABOUT US</button></Link></li>
+            <li><Link href={ currentPage === "/" ? "#contact" : "../#contact" } className='contact-nav' ><button>CONTACT</button></Link></li>
         </ul>
     </div>
   )

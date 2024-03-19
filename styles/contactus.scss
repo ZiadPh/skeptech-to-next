@@ -56,32 +56,31 @@
                 @extend %link;
             }
         }
-        .footer{
-            position: absolute;
-            bottom: 20px;
-            font-family: 'IBM Plex Mono', monospace;
-
-            display: flex;
-            left: 50%;
-            transform: translateX(-50%);
-            justify-content: space-between;
-
-            align-items: center;
-            padding-top: 20px;
-            width: 96%;
-            border-top: 1px solid #fff;
-            .musicc{
-                width: 24px;
-                opacity: 1;
-            }
-            .instagram{
-                text-transform: uppercase;
-                @extend %link;
-            }
-        }
     }
 }
+.footer{
+    position: absolute;
+    bottom: 20px;
+    font-family: 'IBM Plex Mono', monospace;
 
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+
+    align-items: center;
+    padding-top: 20px;
+    width: 96%;
+    border-top: 1px solid #fff;
+    .musicc{
+        width: 24px;
+        opacity: 1;
+    }
+    .instagram{
+        text-transform: uppercase;
+        @extend %link;
+    }
+}
 @media (min-width: 320px) and (max-width: 680px) {
     /* 
       Device = Most of the Smartphones Mobiles (Portrait)

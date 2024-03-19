@@ -1,11 +1,15 @@
 import React from 'react'
-import App from './index'
 import '../styles/index.scss'
+import { AnimatePresence } from 'framer-motion';
 
-export default function Home() {
+
+
+export default function Home({ Component, pageProps, router }) {
   return (
-    <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <AnimatePresence mode={'wait'}>
+            <Component className='indexBG' key={router.pathname} {...pageProps} />
+    </AnimatePresence>
+
   );
 }
+

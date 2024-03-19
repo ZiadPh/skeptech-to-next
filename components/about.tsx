@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = React.forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="about-wrapper" data-scroll-section>
+    <div ref={ref} className="about-wrapper" id='about' data-scroll-section>
         <div className="about-container">
             <div className="about-title">
                 What is Skeptech?

@@ -15,7 +15,7 @@ const Hero = React.forwardRef<HTMLDivElement>((props, ref) => {
     })
   },[])
   return (
-    <div ref={ref} className="hero-container" id="hero-container" data-scroll-section >
+    <div ref={ref} className="hero-container" id="main" data-scroll-section >
         <div className="right">
           <div className="hey">
             <div className="title hi">SkepTech</div>
