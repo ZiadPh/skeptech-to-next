@@ -138,7 +138,7 @@ return(
             <div className="section-4 ">
                 <h1>Client References:</h1>
                 <div className="Carousel">
-                    <Carousel dynamicHeight={true} width={"68%"} >
+                    <Carousel dynamicHeight={true} width={"100%"} >
                         <div>
                             <Image src={Cref1} alt="null"/>
                             <p className="legend">Eleven V visualisation studio</p>
@@ -166,14 +166,14 @@ return(
                     </div>
 
                     <h2>2. Color</h2>
-                    <Image src={Color}/>
-
+                    <div className="fonts">
+                        <Image src={Color}/>
+                    </div>
                     <h2>3. Layout and Prototype</h2>
                     {/* Figma Embed */}
                     <iframe className="embed" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrvQX9LdcjoJEjDmwcguS2N%2FPixel-10%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-254%26viewport%3D137%252C449%252C0.11%26t%3DLLV5Di45F6bm9d6C-1%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A254%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
 
-                    <h2>4. Animations and Transitions</h2>
-                    <div className="animation-grid"></div>
+
                 </div>
             </div>
             <Footer/>
