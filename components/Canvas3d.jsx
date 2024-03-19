@@ -41,7 +41,6 @@ function ThreeCanvas(props) {
 
         <color args={['#181b1f']} attach={'background'}/>              
           <Model message={progress} clr={clr}/>
-        <Stats /> 
       </Canvas>
     </div>
   );

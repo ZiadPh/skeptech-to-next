@@ -6,18 +6,24 @@
     width: 100vw;
     color: $primary-color;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-
-    .sections{
+    line-height: 1.2;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
+
+    .sections{
+        display: flex;
+        flex-direction: column;
         .section-1{
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            min-height: auto;
             width: 100vw;
             align-items: center;
-            justify-content: center;
-
+            justify-content: flex-start;
+            @media (orientation: portrait) {
+                min-height: 150vh;
+            }
         
             & > div{
                 //Section Margin
@@ -29,23 +35,33 @@
                 align-items: center;
                 gap: 4vh;
                 padding-top: 20%;
-
+                @media (orientation: portrait) {
+                    max-width: 90%;
+                }
                 & > :first-child { 
                     //image and title
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     width: 100vw;
-                    
+                    @media (orientation: portrait) {
+                        flex-direction: column;
+                            }
+    
                     & > img{
                         position: absolute;
                         width: 36vw;
                         height: auto;
-                        margin: auto;
-                        top: 4vh;
+                        right: 32vw;
+                        top: 6vh;
                         z-index: 0;
+                        @media (orientation: portrait) {
+                            position:static;
+                            top: 0;
+                            width: 90vw;
+                        }
                     }
-
+    
                     & > div {
                         // cover Title container
                         backdrop-filter: blur(2px);
@@ -58,10 +74,12 @@
                         display: flex;
                         gap: 1vw;
                         padding-bottom: 2.5vh;
-        
+                        @media (orientation: portrait) {
+                            flex-direction: column;
+                        }
                             & > div{
                                 //Numeral
-                                margin: 2.7vh 0;
+                                margin: 3.7vh 0;
                                 font-family: 'IBM Plex Mono', monospace;
                             }
                             & > ul{
@@ -70,7 +88,7 @@
                                     width: 100%;
                                     //cover Title and the underscore
                                     margin: 2vh 0;
-                                    font-size: 64px;
+                                    font-size: clamp(2rem, 1.2789rem + 2.8005vw, 8rem);                                font-family: 'IBM Plex Mono', monospace;                            
                                     font-family: 'IBM Plex Mono', monospace;                            
                                     font-weight: 800;
                                     opacity: 1;
@@ -90,7 +108,7 @@
                                     font-weight: 100;
                                     opacity: 0.8;
                                 }
-            
+               
                             }
                         
                     }
@@ -103,12 +121,19 @@
                     z-index: 1;
                     align-items: flex-start;     
                     gap: 10vw;
+                    @media (orientation: portrait) {
+                        flex-direction: column;
+                    }
+                      
                     & > :first-child{
                         //Paragraph Title
                         font-size: 32px;
                         font-weight: 800;
                         font-family: 'IBM Plex Mono', monospace;
                         padding-left: 2.5vw;
+                        @media (orientation: portrait) {
+                            padding: 0;
+                        }
                     }
                     & > :nth-child(2){
                         //Paragraph Content
@@ -116,6 +141,10 @@
                         font-size: 24px;
                         line-height: 150%;
                         opacity: 0.8;
+                        @media (orientation: portrait) {
+                            text-align: left;
+                            line-height: 120%;
+                        }
                     }
                 }
             }
@@ -136,7 +165,9 @@
                 align-items: flex-start;
                 justify-content: space-between;
                 gap: 4vw;
-                
+                @media (orientation: portrait) {
+                    width: 90%;
+                    }
                 & > h2{
                     font-size: 32px;
                     font-family: 'IBM Plex Mono' , monospace;

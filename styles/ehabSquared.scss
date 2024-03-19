@@ -211,6 +211,10 @@
                     height: 90vh;  /* change this to whatever you want */
                     width: auto;
                     object-fit: cover;
+                    @media (orientation: portrait) {
+                        width: 100%;
+                        height: auto;
+                        }
                 }
             p{
                 text-align: center;

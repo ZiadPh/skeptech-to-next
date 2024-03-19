@@ -117,7 +117,7 @@ return(
             </div>
             <div className="section-4 ">
                 <h1>Shot List:</h1>
-                <Image src={sb} />
+                <Image src={sb} alt="null" />
                 <p>Featuring the proposed storyboard made by Ehab Ehab to illustrate his vision towards the end result</p>
             </div>
 

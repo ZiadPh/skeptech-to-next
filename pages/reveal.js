@@ -114,7 +114,7 @@ return(
             </div>
             <div className="section-4 ">
                 <h1>Final Result</h1>
-                <InstagramEmbed url="https://www.instagram.com/p/CwBWSG8MNCR/" height={viewportSize.height*0.9} width={viewportSize.width*0.3} />
+                <InstagramEmbed url="https://www.instagram.com/p/CwBWSG8MNCR/" className='embed' />
             </div>
             <Footer/>
         </m.div>
