@@ -155,7 +155,9 @@ return(
                     </div>
                     <p>The main idea started with a trial to replicate the computer setup owned by the client on Blender, as it worked pretty well, we had a further interview with our client trying to identify what his visions of a perfect room setup would look like, not to mention that we also paid a visit to his room to gather a better to be able to work towards our overall 3d model. <br/><br/> We also looked Into exaggerating the practical lighting to give it more of the gamer vibes through the RGB elements and screen lights as well as the Hexagonal Light panels that were inspired by the Govee light products.</p>
                     <h2>2. Background ( Aurora UI )</h2>
-                    <Image src={arr}/>
+                    <div className="grid">
+                        <Image className={arr} src={arr}/>
+                    </div>
                     <p>The Background Design was chosen to take the style of the aurora UI so it can act as a realm for the existent 3D model to add some depth, give off a dreamy look and blend seamlessly into the overall look.</p>
                     <h2>3. Colours</h2>
                     <div>
@@ -182,25 +184,30 @@ For  the Text and UI elements the choice of Beige and Black was mainly to serve 
                         On the other hand, the Ruler on the margins of the page was more of a Functionality decision to serve as a timeline of his career that is demonstrated into his CV.
                          </p>
                     <h2>5. Animations</h2>
+                  <div className="vids"> 
                     <p>Animations were a key factor in the whole experience where different animations throughout the experience were used to deliver different feelings to the user:</p>
                     <iframe
-                    frameBorder={0}
-                    allowFullScreen=""
-                    scrolling="no"
-                    allow="autoplay;fullscreen"
-                    src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fhkfudahiziwsrtrhr5ocp%2FFade.mp4%3Frlkey%3Du7acrpsy2vzrzzvhum6s8seo0%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=720p&playButton=false"
-                    style={{ height: "100%", width: "100%", aspectRatio: "1598 / 782" }}
-                    />
-                    <p>Fading Animations: Most of the changes that happens between the day and night theme occurs through a fading animation to give off the feeling of the passage of time between day and night as well as to serve into the overall dreamy vibe.</p>
-                    <iframe
-                    frameBorder={0}
-                    allowFullScreen=""
-                    scrolling="no"
-                    allow="autoplay;fullscreen"
-                    src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Ffkle54g99v3g7mhzwq1j7%2FReveal.mp4%3Frlkey%3Dpx2kqgi9yw2d6r0jrbozs9eed%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=720p&playButton=false"
-                    style={{ height: "100%", width: "100%", aspectRatio: "1352 / 780" }}
-                    />
-                    <p>Text Reveal Animation: This was mainly intended to give off more of this digital look takes up a massive part of the client&apos;s lifestyle, not to mention how it synchronises with the change of the elements on the screens in the 3D model.</p>
+                        frameBorder={0}
+                        allowFullScreen=""
+                        scrolling="no"
+                        allow="autoplay;fullscreen"
+                        src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Fhkfudahiziwsrtrhr5ocp%2FFade.mp4%3Frlkey%3Du7acrpsy2vzrzzvhum6s8seo0%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=720p&playButton=false"
+                        className="vid"
+                        style={{aspectRatio: "1598 / 782"}}
+                        />
+                        <p>Fading Animations: Most of the changes that happens between the day and night theme occurs through a fading animation to give off the feeling of the passage of time between day and night as well as to serve into the overall dreamy vibe.</p>
+                        <iframe
+                        frameBorder={0}
+                        allowFullScreen=""
+                        scrolling="no"
+                        allow="autoplay;fullscreen"
+                        src="https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fwww.dropbox.com%2Fscl%2Ffi%2Ffkle54g99v3g7mhzwq1j7%2FReveal.mp4%3Frlkey%3Dpx2kqgi9yw2d6r0jrbozs9eed%26raw%3D1&poster=&time=false&progressBar=false&overlay=true&muteButton=false&fullscreenButton=false&style=light&quality=720p&playButton=false"
+                        className="vid"
+                        style={{ aspectRatio: "1352 / 780" }}
+
+                        />
+                        <p>Text Reveal Animation: This was mainly intended to give off more of this digital look takes up a massive part of the client&apos;s lifestyle, not to mention how it synchronises with the change of the elements on the screens in the 3D model.</p>
+                    </div>
                 </div>
             </div>
             <Footer/>
