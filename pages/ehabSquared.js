@@ -124,7 +124,7 @@ return(
             <div className="section-5">
                     <h1>Behind the Scenes</h1>
                     <div className="Carousel">
-                        <Carousel dynamicHeight={true} width={viewportSize.width*0.8} >
+                        <Carousel dynamicHeight={true} width='100%' >
                             <div>
                                 <Image src={VFX1} alt="null"/>
                                 <p className="legend">Building the whole 3D scene of his room using a different range of 3D models and Photogrammetry</p>
@@ -153,7 +153,7 @@ return(
             </div>
             <div className="section-4 ">
                 <h1>Final Result</h1>
-                <InstagramEmbed url="https://www.instagram.com/p/CleMfhZtcqo/" height={viewportSize.height*0.9} width={viewportSize.width*0.3} />
+                <InstagramEmbed url="https://www.instagram.com/p/CleMfhZtcqo/" className='embed' />
             </div>
             <Footer/>
         </m.div>
