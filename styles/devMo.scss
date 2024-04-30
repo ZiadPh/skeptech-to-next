@@ -1,8 +1,11 @@
 
+
+    .dm{
+        background: rgb(37,54,48);
+        background: linear-gradient(180deg, #141A26 0%, #4A608C 100%);
+    }
 .devMo-wrap{
     position: relative;
-    background: rgb(37,54,48);
-    background: linear-gradient(180deg, #141A26 0%, #4A608C 100%);
     width: 100vw;
     color: $primary-color;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
@@ -16,6 +19,7 @@
         flex-direction: column;
         min-height: auto;
         width: 100vw;
+        margin-bottom: 10vh;
         align-items: center;
         justify-content: flex-start;
         @media (orientation: portrait) {
@@ -162,31 +166,35 @@
         width: 100vw;
         height: auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
         & > div{
-            margin-top: 8vh;
-            margin-bottom: 8vh;
+            margin-bottom: 10vh;
             width: 68%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 4vw;
+            gap: 5vh;
             
             & > h2{
                 font-size: 32px;
                 font-family: 'IBM Plex Mono' , monospace;
                 font-weight: 800;
             }
-            
+            & > p{
+                margin-top: -2.5vh;
+                font-size: 24px;
+                font-weight: 400;
+            }
             & > ul{
                 font-size: 24px;
                 opacity: 0.8;
                 display: flex;
                 flex-direction: column;
-                gap: 4vh;
+                gap: 2.5vh;
                 line-height: 150%;
                 & > li > span{
                     font-weight: 600;
@@ -268,7 +276,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 4vh;
+                gap: 5vh;
                 margin-bottom: 10vh;
                 & > .vid{
                     width: 90vw;
