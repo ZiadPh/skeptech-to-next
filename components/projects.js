@@ -5,7 +5,7 @@ import DevMo from '../assets/devMo.png'
 import GallerSkep from '../assets/GallerySkep.png'
 import laptop from '../assets/laptop.png'
 import ehab from '../assets/ehabSquared.png'
-import CK from '../assets/CK.png'
+import CK from '../assets/elevatex.png'
 import reveal from '../assets/rvl.png'
 import turkish from '../assets/Stopmotion.png'
 import Image from 'next/image'
@@ -53,11 +53,11 @@ const projects = React.forwardRef((props, ref ) => {
       description: 'This was one of the first projects in skeptech that we were proud to execute using 3D design and implementation through blender and three.js to create this immersive CV experience using visual storytelling'
     },
     {
-      name: 'Circle K: Dedicated App',
+      name: 'Elevate X: Marketing Agency',
       url: CK,
-      link: 'https://www.behance.net/gallery/142011903/UXUI-Circle-K-Egypt-App-(Unofficial)',
-      dTitle: 'UX / UI',
-      description: 'Circle K is a dedicated mobile application for coffee ordering. The projects primary goal is to provide a seamless and user-friendly experience for customers to order their coffee quickly and efficiently. The application includes features such as personalized drink customization, multiple payment options, and the ability to save favorite orders for future use. The design also incorporates a loyalty points system, allowing customers to earn rewards and discounts for frequent orders'
+      link: '/elevatex',
+      dTitle: 'DEV / UI',
+      description: 'ElevateX, we undertook the challenge of redesigning their website to reflect their innovative approach and provide a seamless user interface.'
     },
     {
       name: 'Pixel10 Studio',

@@ -10,41 +10,17 @@ import s3d from '../assets/setup3d.png'
 import arr from '../assets/aurora.png'
 import MI from '../assets/MI.png'
 import rlr from '../assets/ruler.png'
-import { useState , useEffect } from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 
 
 export default function pixel() {
 
-    const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 });
 
-    useEffect(() => {
-      // Function to update the viewport size
-      function handleResize() {
-        setViewportSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-  
-      // Add an event listener to update the viewport size when the window is resized
-      window.addEventListener('resize', handleResize);
-  
-      // Initial call to set the viewport size
-      handleResize();
-  
-      // Clean up the event listener when the component unmounts
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
   
 
 return(
-    <div className="devMo-wrap">
+    <div className="devMo-wrap dm">
         <Nav />
         <m.div
         initial="pageInitial"
