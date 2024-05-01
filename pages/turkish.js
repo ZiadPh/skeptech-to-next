@@ -34,7 +34,7 @@ export default function pixel() {
   
 
 return(
-    <div className="turkish">
+    <div className="turkish project-wrapper">
         <Nav />
         <m.div className="sections"
         initial="pageInitial"
@@ -78,7 +78,7 @@ return(
                 
                 </div>
             </div>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Project Description:</h2>
 

@@ -41,7 +41,7 @@ export default function pixel() {
   
 
 return(
-    <div className="p11wrap">
+    <div className="p11wrap project-wrapper">
         <Nav />
         <m.div
         initial="pageInitial"
@@ -93,10 +93,10 @@ return(
                     </div>
                 </div>
             </div>
-            <div className="Section-2">
+            <div className="fs-image">
                 <Image className="gif" src={PixelGif} width={viewportSize.width}  alt="PixelGif"/>
             </div>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Objectives:</h2>
                     <ul>

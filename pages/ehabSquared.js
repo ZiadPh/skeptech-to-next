@@ -39,7 +39,7 @@ export default function pixel() {
   
 
 return(
-    <div className="ehab-wrap">
+    <div className="project-wrapper ehab">
         <Nav />
         <m.div className="sections"
         initial="pageInitial"
@@ -95,7 +95,7 @@ return(
                     </div>
                 </div>
             </div>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Context:</h2>
                     <ul>

@@ -20,7 +20,7 @@ export default function pixel() {
   
 
 return(
-    <div className="devMo-wrap dm">
+    <div className="project-wrapper dm">
         <Nav />
         <m.div
         initial="pageInitial"
@@ -71,7 +71,7 @@ return(
                     </div>
                 </div>
             </div>
-            <div className="Section-2">
+            <div className="fs-media">
                 <iframe
                 frameBorder={0}
                 allowFullScreen=""
@@ -81,7 +81,7 @@ return(
                 style={{ height: "100%", width: "100%", aspectRatio: "1598 / 782" }}
                 />
             </div>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Objectives:</h2>
                     <ul>
