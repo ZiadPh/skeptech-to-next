@@ -11,6 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import { InstagramEmbed } from 'react-social-media-embed';
+import Head from "next/head"
 
 export default function pixel() {
 
