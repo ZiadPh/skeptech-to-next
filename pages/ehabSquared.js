@@ -40,6 +40,12 @@ export default function pixel() {
 
 return(
     <div className="project-wrapper ehab">
+              <Head>
+        <title>SkepTech | Project</title>
+        <meta property="og:title" content="SkepTech | Project" key="title" />
+        <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
+
+      </Head>
         <Nav />
         <m.div className="sections"
         initial="pageInitial"

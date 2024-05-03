@@ -14,7 +14,7 @@
             letter-spacing:3px;
             font-family: 'IBM Plex Mono', monospace;
             font-weight: 500;
-            font-size: clamp(30px, 12vw, 30vw);
+            @include titleM;
             -webkit-text-stroke: 2px rgb(218, 218, 218);
             color:rgba($color: $primary-color, $alpha: .08);
             margin-bottom: 2rem;
@@ -51,13 +51,18 @@
         .services-title{
             -webkit-text-stroke: 1px rgb(218, 218, 218);
             color:rgba($color: $primary-color, $alpha: .02);
-            margin-left: 8vw;
+            margin-left: 2vw;
+            @include titleS;
+
         }
         .service-title{
-            margin-left: 8vw;
+            margin-left: 2vw;
+            @include baseXL
         }
         .services-description{
-            margin-left: 8vw;
+            margin-left: 2vw;
+            @include baseL;
+            width: 96%;
         }
     }
   }

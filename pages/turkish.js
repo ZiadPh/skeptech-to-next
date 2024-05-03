@@ -6,6 +6,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { motion as m } from 'framer-motion'
 import { InstagramEmbed } from 'react-social-media-embed';
 import Footer from "../components/Footer"
+import Head from "next/head";
+
 
 export default function pixel() {
 
@@ -35,6 +37,12 @@ export default function pixel() {
 
 return(
     <div className="turkish project-wrapper">
+                      <Head>
+        <title>SkepTech | Project</title>
+        <meta property="og:title" content="SkepTech | Project" key="title" />
+        <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
+
+      </Head>
         <Nav />
         <m.div className="sections"
         initial="pageInitial"

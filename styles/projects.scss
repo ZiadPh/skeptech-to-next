@@ -5,6 +5,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 8vh;
+    align-items: center;
     // position: relative;
     .tabsContainer {
         display: flex;
@@ -17,12 +18,17 @@
         gap: 10vh;
         margin-top: 4vh;
 
+
         .tabs {
             display: flex;
             justify-content: space-around;
-            font-size: clamp(20px, 3vw, 5vw);
             margin-bottom: 3vh;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 4vh;
+                align-items: center;
+            }
             
             .bottom-line {
                 border-radius: 50%;
@@ -65,10 +71,11 @@
             color: #c6c2bb;
             .project-name{
                display: flex;
-                font-size: clamp(20px, 3vw, 5vw);
                 letter-spacing: 3px;
                 font-weight: 200;
-
+                @media (max-width: 768px) {
+                    @include baseXL;
+                }
             }
             .project-number{
                 align-self: flex-start;
@@ -145,6 +152,7 @@
 .project-name{
  opacity: 0;
  transform: translateY(40px);
+ @include titleS;
 }
  
 
@@ -154,7 +162,6 @@
       Screen = 320px to 479px
     */
 .projects-wrapper{
-    margin-left: 8vw;
     .project-container{
         .projects-title{
             margin-left: 0;
@@ -165,4 +172,13 @@
 .projects-description{
     width: 50vw;
 }
+}
+
+.tab-text{
+
+    @include titleS;
+
+    @media (max-width: 768px) {
+        @include baseXXL;
+    }
 }
