@@ -1,6 +1,7 @@
 
 // Imports
 // import '../styles/App.scss'
+import Head from 'next/head'
 import Nav from '../components/nav'
 import Hero from '../components/hero'
 import Projects from '../components/projects'
@@ -155,7 +156,12 @@ const currentPage = useCurrentPage();
 
   return (
     <div className='indexBG'> 
+      <Head>
+        <title>SkepTech | Home</title>
+        <meta property="og:title" content="SkepTech | Home" key="title" />
+        <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
 
+      </Head>
         <Nav currentPage={currentPage} />
         <m.div
         initial={{opacity:0}}

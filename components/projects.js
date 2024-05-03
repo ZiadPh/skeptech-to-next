@@ -120,10 +120,10 @@ const projects = React.forwardRef((props, ref ) => {
   //-----------------------------------------------------------------------------------------------
     const tabTitles = [
       <div>
-        <h2>Website Design</h2>
+        <h2 className='tab-text'>Website Design</h2>
       </div>,
       <div>
-        <h2>Video Production</h2>
+        <h2 className='tab-text'>Video Production</h2>
       </div>
   
   ];

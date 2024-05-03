@@ -11,6 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import { InstagramEmbed } from 'react-social-media-embed';
+import Head from "next/head"
 
 export default function pixel() {
 
@@ -39,7 +40,13 @@ export default function pixel() {
   
 
 return(
-    <div className="ehab-wrap">
+    <div className="project-wrapper ehab">
+              <Head>
+        <title>SkepTech | Project</title>
+        <meta property="og:title" content="SkepTech | Project" key="title" />
+        <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
+
+      </Head>
         <Nav />
         <m.div className="sections"
         initial="pageInitial"
@@ -95,7 +102,7 @@ return(
                     </div>
                 </div>
             </div>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Context:</h2>
                     <ul>

@@ -9,19 +9,19 @@
         margin-bottom: 35rem;
         margin-top: 25rem;
         .about-title{
-    
+            font-size: clamp(9.923125rem, 8.0156rem + 3.974vw, 17.553125rem) !important;
             letter-spacing:3px;
             letter-spacing:3px;
             font-family: 'IBM Plex Mono', monospace;
             font-weight: 500;
-            font-size: clamp(30px, 12vw, 30vw);
+            @include titleL;
             -webkit-text-stroke: 2px rgb(218, 218, 218);
             color:rgba($color: $primary-color, $alpha: .08);
             margin-bottom: 4rem;
         }
         .about-description{
             color: $primary-color;
-            font-size:clamp(12px, 1.5vw, 7vw);
+            @include baseL;
             margin-top: 2rem;
             line-height: 35px;
             letter-spacing: .5px;
@@ -44,27 +44,25 @@
         justify-content: flex-start;
         .about-container{
             width: 100%;
-            margin-left: 8vw;
+            margin-left: 4vw;
             margin-bottom: 35rem;
             margin-top: 25rem;
             .about-title{
-        
+                font-size: clamp(3.1575rem, 2.5442rem + 1.2777vw, 5.610625rem) !important;
                 letter-spacing:3px;
                 letter-spacing:3px;
                 font-family: 'IBM Plex Mono', monospace;
                 font-weight: 500;
-                font-size: clamp(30px, 12vw, 30vw);
                 -webkit-text-stroke: 1px rgb(218, 218, 218);
                 color:rgba($color: $primary-color, $alpha: .08);
                 margin-bottom: 4rem;
             }
             .about-description{
-                font-size:clamp(12px, 1.5vw, 7vw);
                 margin-top: 2rem;
                 line-height: 35px;
                 letter-spacing: .5px;
                 margin-left: 0rem;
-                width: 70%;
+                width: 96%;
     
             }
         }

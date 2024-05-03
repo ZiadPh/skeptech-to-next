@@ -2,3 +2,63 @@ $primary-color: #C6C2BB;
 $highlight-color: #FDCC6D;
 $lowlight-color: rgba(198, 194, 187, .5);
 $ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+// Typography 
+
+@mixin titleL{
+    font-size: clamp(5.610625rem, 4.5209rem + 2.2702vw, 9.969375rem);
+}
+@mixin titleM{
+    font-size: clamp(4.20875rem, 3.3913rem + 1.7031vw, 7.47875rem);
+}
+@mixin titleS{
+    font-size: clamp(3.1575rem, 2.5442rem + 1.2777vw, 5.610625rem);
+}
+@mixin baseXXL{
+    font-size: clamp(2.36875rem, 1.9087rem + 0.9583vw, 4.20875rem);
+}
+@mixin baseXL{
+    font-size: clamp(1.776875rem, 1.4317rem + 0.7191vw, 3.1575rem); 
+}
+@mixin baseL{
+    font-size: clamp(1.333125rem, 1.0742rem + 0.5394vw, 2.36875rem);
+}
+@mixin base{
+    font-size: clamp(1rem, 0.8058rem + 0.4046vw, 1.776875rem);
+}
+@mixin baseS{ 
+    font-size: clamp(0.75rem, 0.6042rem + 0.3037vw, 1.333125rem);
+}
+@mixin baseXS{
+    font-size: clamp(0.5625rem, 0.4531rem + 0.2279vw, 1rem);
+}
+
+body{
+h1{
+    @include titleL;
+    @media (max-width: 768px) {
+        @include titleM;
+    }
+}
+
+h2{
+    @include titleM;
+    @media (max-width: 768px) {
+        @include titleS;
+    }
+}
+
+h3{
+    @include titleS;
+    @media (max-width: 768px) {
+        @include baseXXL;
+    }
+}
+
+p{
+    @include base;    
+    @media (max-width: 768px) {
+        @include baseL;
+    }
+}    
+}

@@ -13,13 +13,21 @@ import MI from '../assets/MI.png'
 import rlr from '../assets/ruler.png'
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
+import Head from "next/head"
+
 export default function pixel() {
 
 
   
 
 return(
-    <div className="devMo-wrap ex">
+    <div className="project-wrapper ex">
+                      <Head>
+        <title>SkepTech | Project</title>
+        <meta property="og:title" content="SkepTech | Project" key="title" />
+        <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
+
+      </Head>
         <Nav />
         <m.div
         initial="pageInitial"
@@ -71,7 +79,7 @@ return(
                 </div>
             </div>
             <div className=" s2 "/>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>ElevateX: A Vision Brought to Life</h2>
                     <ul>
@@ -119,7 +127,7 @@ return(
                 </div>
             </div>
             <div className="s3"/>
-            <div className="section-3">
+            <div className="text-column">
                 <div>
                     <h2>Explore the ElevateX Website Design</h2>
                     <p>Ready to take a closer look at my design work for ElevateX? Here's a glimpse of some of the key pages:</p>
@@ -158,7 +166,7 @@ return(
                 </div>
             </div>
             <div className="s4"/>
-            <div className="section-3" style={{ marginBottom: '10vh'}}>
+            <div className="text-column" style={{ marginBottom: '10vh'}}>
                 <div>
                     <h2>Experience My Design Work Today!</h2>
                     <ul>
