@@ -162,6 +162,7 @@ const currentPage = useCurrentPage();
         <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
 
       </Head>
+        <div className='noise'/>
         <Nav currentPage={currentPage} />
         <m.div
         initial={{opacity:0}}
