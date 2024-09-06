@@ -15,7 +15,7 @@
 
 }
 .right{
-    margin-top: 30vh;
+    margin-top: 20vh;
     z-index: 1;
     margin-left: 10vw;
     max-width: 90vw;
@@ -33,27 +33,30 @@
 // }
 .title{
     color: $primary-color;
-    font-size: clamp(48px, 14vw, 320px);
-    margin-bottom: 2rem;
+    font-size: clamp(48px, 11vw, 320px);
+    // margin-bottom: 2rem;
     opacity: 0;
-    text-transform: uppercase;
+    font-family: 'NR';
     transform: translateY(100px);
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .quote{
     color: $primary-color;
     font-size: clamp(12px, 4vw, 40px);
     opacity: 0;
+    font-family: 'IBM Plex Mono', monospace;
     transform: translateY(100px);
-    letter-spacing: 7px;
 }
 .highlight{
     color: $highlight-color;
 }
 .hey{
     overflow: hidden;
-    padding-bottom: 5px;
+    padding-bottom: 4vh;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
