@@ -13,6 +13,7 @@
 @import "../styles/reveal.scss";
 @import "../styles/elevatex.scss";
 @import "../styles/projectPage.scss";
+@import "../styles/squares.scss";
 
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 @import "../node_modules/locomotive-scroll/src/locomotive-scroll.scss";
@@ -56,6 +57,7 @@ body {
     overflow-x: hidden;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
+    background-color: #031216;
     -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
     :-webkit-scrollbar {

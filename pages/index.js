@@ -13,7 +13,7 @@ import ThreeCanvas from '../components/Canvas3d'
 import { useRouter } from 'next/router';
 import { useSpring } from 'react-spring';
 import { motion as m } from 'framer-motion'
-
+import Squares from '../components/squares'
 
 // Custom hook to get the current page
 const useCurrentPage = () => {
@@ -163,6 +163,7 @@ const currentPage = useCurrentPage();
 
       </Head>
         <div className='noise'/>
+        <div className='noise'/>
         <Nav currentPage={currentPage} />
         <m.div
         initial={{opacity:0}}
@@ -173,8 +174,14 @@ const currentPage = useCurrentPage();
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
-        <ThreeCanvas scrollProgress={scrollTop} clr={springProps.color} />
-
+        {/* <ThreeCanvas scrollProgress={scrollTop} clr={springProps.color} /> */}
+        <Squares 
+          speed={0.3} 
+          size={400} //pixels
+          direction='diagonal' // up, down, left, right, diagonal
+          borderColor='#2E3F40'
+          hoverFillColor='#222'
+        />
         <m.div 
         data-scroll-container
         ref={containerRef}
