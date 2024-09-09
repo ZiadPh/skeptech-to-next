@@ -45,7 +45,7 @@
     .project-container{
          .projects-title{
             margin-left: 5rem;
-            font-size: 12px;
+            @include baseS;
             letter-spacing: 3px;
             text-transform: uppercase;
             opacity: .5;
@@ -73,13 +73,13 @@
                display: flex;
                 letter-spacing: 3px;
                 font-weight: 200;
-                @media (max-width: 768px) {
-                    @include baseXL;
-                }
+                opacity: 0;
+                transform: translateY(40px);
+                @include titleS;
             }
             .project-number{
                 align-self: flex-start;
-                font-size: 12px;
+                @include baseS;
                 margin-right: 20px;
                 margin-top: 6px;
                                
@@ -150,9 +150,7 @@
     opacity: 1;
 }
 .project-name{
- opacity: 0;
- transform: translateY(40px);
- @include titleS;
+
 }
  
 
@@ -176,9 +174,7 @@
 
 .tab-text{
 
-    @include titleS;
+    @include titleM;
+    font-weight: 500;
 
-    @media (max-width: 768px) {
-        @include baseXXL;
-    }
 }

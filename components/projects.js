@@ -123,7 +123,7 @@ const projects = React.forwardRef((props, ref ) => {
         <h2 className='tab-text'>Website Design</h2>
       </div>,
       <div>
-        <h2 className='tab-text'>Video Production</h2>
+        <h2 className='tab-text'>Skeptech TV</h2>
       </div>
   
   ];

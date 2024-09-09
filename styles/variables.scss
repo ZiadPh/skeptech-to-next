@@ -5,60 +5,92 @@ $ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 
 // Typography 
 
+@mixin DisplayM{
+    font-size: clamp(9.923125rem, 8.0155rem + 3.9743vw, 17.5536875rem);
+    font-family: 'NR' , "Helvetica Neue";
+    
+    @media (max-width: 768px) {
+        font-size: clamp(4.3rem, 2.9487rem + 6.7567vw, 6.191875rem);
+    }
+}
+@mixin DisplayS{
+    font-size: clamp(7.46125rem, 6.8456rem + 1.2826vw, 9.92375rem);
+    font-family: 'NR' , "Helvetica Neue";
+
+    @media (max-width: 768px) {
+        font-size: clamp(3.58375rem, 2.4579rem + 5.6295vw, 5.16rem);
+    }
+}
 @mixin titleL{
     font-size: clamp(5.610625rem, 4.5209rem + 2.2702vw, 9.969375rem);
+    font-family: 'NR' , "Helvetica Neue";
+
+    @media (max-width: 768px) {
+        font-size: clamp(2.98625rem, 2.0479rem + 4.692vw, 4.3rem);
+    }
 }
 @mixin titleM{
     font-size: clamp(4.20875rem, 3.3913rem + 1.7031vw, 7.47875rem);
+    font-family: 'NR' , "Helvetica Neue";
+
+    @media (max-width: 768px) {
+        font-size: clamp(2.488125rem, 1.706rem + 3.9107vw, 3.583125rem);
+    }
 }
 @mixin titleS{
     font-size: clamp(3.1575rem, 2.5442rem + 1.2777vw, 5.610625rem);
+    font-family: 'NR' , "Helvetica Neue";
+
+    @media (max-width: 768px) {
+        font-size: clamp(2.07375rem, 1.422rem + 3.2589vw, 2.98625rem);
+    }
 }
 @mixin baseXXL{
     font-size: clamp(2.36875rem, 1.9087rem + 0.9583vw, 4.20875rem);
+    font-family: 'IBM Plex Mono', monospace;
+
+    @media (max-width: 768px) {
+        font-size: clamp(1.728125rem, 1.1853rem + 2.7143vw, 2.488125rem);
+    }
 }
 @mixin baseXL{
     font-size: clamp(1.776875rem, 1.4317rem + 0.7191vw, 3.1575rem); 
+    font-family: 'IBM Plex Mono', monospace;
+
+    @media (max-width: 768px) {
+        font-size: clamp(1.44rem, 0.9873rem + 2.2634vw, 2.07375rem);
+    }
 }
 @mixin baseL{
     font-size: clamp(1.333125rem, 1.0742rem + 0.5394vw, 2.36875rem);
+    font-family: 'IBM Plex Mono', monospace;
+
+    @media (max-width: 768px) {
+        font-size: clamp(1.2rem, 0.8228rem + 1.8862vw, 1.728125rem);
+    }
 }
 @mixin base{
     font-size: clamp(1rem, 0.8058rem + 0.4046vw, 1.776875rem);
+    font-family: 'IBM Plex Mono', monospace;
+
+    @media (max-width: 768px) {
+        font-size: clamp(1rem, 0.6857rem + 1.5714vw, 1.44rem);
+    }
 }
 @mixin baseS{ 
     font-size: clamp(0.75rem, 0.6042rem + 0.3037vw, 1.333125rem);
+    font-family: 'IBM Plex Mono', monospace;
+
+    @media (max-width: 768px) {
+        font-size: clamp(0.833125rem, 0.5711rem + 1.3103vw, 1.2rem);
+    }
 }
 @mixin baseXS{
     font-size: clamp(0.5625rem, 0.4531rem + 0.2279vw, 1rem);
-}
+    font-family: 'IBM Plex Mono', monospace;
 
-body{
-h1{
-    @include titleL;
     @media (max-width: 768px) {
-        @include titleM;
+        font-size: clamp(0.694375rem, 0.4761rem + 1.0915vw, 1rem);
     }
 }
 
-h2{
-    @include titleM;
-    @media (max-width: 768px) {
-        @include titleS;
-    }
-}
-
-h3{
-    @include titleS;
-    @media (max-width: 768px) {
-        @include baseXXL;
-    }
-}
-
-p{
-    @include base;    
-    @media (max-width: 768px) {
-        @include baseL;
-    }
-}    
-}

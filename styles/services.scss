@@ -1,5 +1,5 @@
 .services-wrapper{
-    height:100vh;
+    min-height:100vh;
     min-width: 100vw;
     .services-container{
         width: 100%;
@@ -13,29 +13,30 @@
             letter-spacing:3px;
             letter-spacing:3px;
             font-family: 'IBM Plex Mono', monospace;
-            font-weight: 500;
-            @include titleM;
+            font-weight: 700;
+            @include DisplayS;
             -webkit-text-stroke: 2px rgb(218, 218, 218);
             color:rgba($color: $primary-color, $alpha: .08);
             margin-bottom: 2rem;
 
         }
+   
         .service-title{
             color: $primary-color;
             margin-left:8vw;
-            font-size: clamp(20px, 3vw, 10vw);
-            font-weight: bold;
+            @include titleS;
+            font-weight: 500;
             letter-spacing: 2px;
+            margin-bottom: 2rem;
         }
         .services-description{
             color: $primary-color;
-            font-size:clamp(12px, 1.5vw, 7vw);
+            @include baseL;
             margin-top: 1rem;
             line-height: 35px;
             letter-spacing: .5px;
             margin-left: 8vw;
             width: 70%;
-            font-weight: 100;
 
         }
     }
@@ -52,12 +53,9 @@
             -webkit-text-stroke: 1px rgb(218, 218, 218);
             color:rgba($color: $primary-color, $alpha: .02);
             margin-left: 2vw;
-            @include titleS;
-
         }
         .service-title{
             margin-left: 2vw;
-            @include baseXL
         }
         .services-description{
             margin-left: 2vw;

@@ -23,7 +23,7 @@ const Hero = React.forwardRef<HTMLDivElement>((props, ref) => {
             <div className="title hi">SkepTech</div>
           </div>
           <div className="hey">
-            <div className="quote hi">"A Design studio for the technologies you might be <span className="highlight">skeptical</span> about"</div>
+            <div className="quote hi">"Crafting a <span className="highlight">healthier</span>, <span className="highlight">more vibrant</span> online world."</div>
 
           </div>
         </div>

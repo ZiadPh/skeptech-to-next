@@ -33,7 +33,7 @@
 // }
 .title{
     color: $primary-color;
-    font-size: clamp(48px, 11vw, 320px);
+    @include DisplayM;
     // margin-bottom: 2rem;
     opacity: 0;
     font-family: 'NR';
@@ -43,8 +43,8 @@
 
 .quote{
     color: $primary-color;
-    font-size: clamp(12px, 4vw, 40px);
-    opacity: 0;
+    @include baseXL;
+   opacity: 0;
     font-family: 'IBM Plex Mono', monospace;
     transform: translateY(100px);
 }
@@ -64,11 +64,15 @@
       Device = Most of the Smartphones Mobiles (Portrait)
       Screen = 320px to 479px
     */
-
+    .hey{
+        flex-direction: column;
+    }
+    .title{
+    }
     .quote{
         letter-spacing: 0;
         line-height: 150%;
         max-width: 85vw;
-        @include baseXXL;
+        // @include baseL;
     }
   }
