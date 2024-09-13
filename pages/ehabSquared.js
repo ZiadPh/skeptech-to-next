@@ -12,6 +12,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import { InstagramEmbed } from 'react-social-media-embed';
 import Head from "next/head"
+import PHeader from "../components/projectHeader"
 
 export default function pixel() {
 
@@ -70,40 +71,15 @@ return(
         }}
         transition={{ duration: 0.5 }}
         >
-            <div className="section-1">
-                <div> 
-                {/* Section Margin 68% */}
-                    <div>
-                    {/* Container for image and Title wrapper */}
-                        <Image src={ehab}  />    
-                        <div>
-                        {/*Title wrapper */}
-                            <div>#01</div>
-                            <ul>
-                                <li>
-                                    <div>Exhausted by Fumes and Drivers: Teaser</div>
-                                    <div>_</div>
-                                </li>
-                                <li>Service: Cinematography and VFX</li>
-                                <li>Client Name: Ehab Ehab</li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div>
-                    {/* Container for first Paragraph*/}
-                        <div>
-                            Background:
-                        </div>
-                        <div>
-                            A Visual artist, born in Cairo in 2000, Ehab lives and works in Cairo. He graduated from
-                            Applied Arts in Helwan University,2023. He is interested in practicing visual arts in all its
-                            forms, and experimenting with many materials and techniques such as drawing, painting,
-                            digital painting, sculpture, graffiti and murals, but despite that, most of his production are
-                            paintings. 
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <PHeader 
+            imgsrc={ehab}
+            imgalt={"ehab's room"} 
+            number={"04"} 
+            title={"Exhausted by Fumes and Drivers: Teaser"}
+            service={"Cinematography and VFX"}
+            client={"Ehab Ehab"}
+            background={"A Visual artist, born in Cairo in 2000, Ehab lives and works in Cairo. He graduated from Applied Arts in Helwan University in 2023. He is interested in practicing visual arts in all its forms, and experimenting with many materials and techniques such as drawing, painting, digital painting, sculpture, graffiti, and murals, but despite that, most of his production are paintings."}
+            />
             <div className="text-column">
                 <div>
                     <h2>Context:</h2>

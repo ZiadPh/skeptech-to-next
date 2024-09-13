@@ -13,7 +13,8 @@ import rlr from '../assets/ruler.png'
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 import Head from "next/head"
-
+import PHeader
+ from "../components/projectHeader"
 export default function pixel() {
 
 
@@ -50,35 +51,15 @@ return(
         }}
         transition={{ duration: 0.5 }}
         >
-            <div className="section-1">
-                <div> 
-                {/* Section Margin 68% */}
-                    <div>
-                    {/* Container for image and Title wrapper */}
-                        <Image src={DM3D} alt="null" />    
-                        <div>
-                        {/*Title wrapper */}
-                            <div>#01</div>
-                            <ul>
-                                <li>
-                                    <div>DevMohamed: Website</div>
-                                    <div>_</div>
-                                </li>
-                                <li>Service: Website UI Design and Development</li>
-                                <li>Client Name: Mohamed Ibrahim</li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div>
-                    {/* Container for first Paragraph*/}
-                        <div>
-                            Summary:
-                        </div>
-                        <div>
-                        The project involves the creation of an interactive and engaging online curriculum vitae (CV) that showcases a developer&apos;s workspace using 3D visualization. This virtual experience will enable visitors to explore the developer&apos;s environment, providing an immersive insight into their work area, including details of the computer setup and any relevant gadgets or tools.</div>
-                    </div>
-                </div>
-            </div>
+                        <PHeader 
+            imgsrc={DM3D}
+            imgalt={"Mohamed's room"} 
+            number={"01"} 
+            title={"DevMohamed: Website"}
+            service={"Website UI Design and Development"}
+            client={"Mohamed Ibrahim"}
+            background={"The project involves the creation of an interactive and engaging online curriculum vitae (CV) that showcases a developer's workspace using 3D visualization. This virtual experience will enable visitors to explore the developer's environment, providing an immersive insight into their work area, including details of the computer setup and any relevant gadgets or tools."}
+            />
             <div className="fs-media">
                 <iframe
                 frameBorder={0}
@@ -129,9 +110,7 @@ return(
 
             </div>
             <div className="section-5">
-                <div className="s5-wrapper">
-                    <h1>The Process</h1>
-                    
+                <div className="s5-wrapper">                    
                     <h2>1. 3D Model</h2>
                     <div className="fonts">
                         <Image src={room} alt="Null"/>

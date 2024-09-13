@@ -14,7 +14,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 import Head from "next/head"
-
+import PHeader from "../components/projectHeader"
 
 export default function pixel() {
 
@@ -72,37 +72,16 @@ return(
         },
         }}
         transition={{ duration: 0.5 }}
-        >
-            <div className="section-1">
-                <div> 
-                {/* Section Margin 68% */}
-                    <div>
-                    {/* Container for image and Title wrapper */}
-                        <Image src={Pixel3D}  />    
-                        <div>
-                        {/*Title wrapper */}
-                            <div>#01</div>
-                            <ul>
-                                <li>
-                                    <div>Pixel10 Studio: Website</div>
-                                    <div>_</div>
-                                </li>
-                                <li>Service: Website UI Design and Development</li>
-                                <li>Client Name: Mohamed Ibrahim</li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div>
-                    {/* Container for first Paragraph*/}
-                        <div>
-                            Background:
-                        </div>
-                        <div>
-                            Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        >   
+            <PHeader 
+            imgsrc={Pixel3D}
+            imgalt={"Interior of Pixel10 Studio"} 
+            number={"03"} 
+            title={"Pixel10 Studio: Website"}
+            service={"Website UI Design and Development"}
+            client={"Pixel10 Studio"}
+            background={"Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors."}
+            />
             <div className="fs-image">
                 <Image className="gif" src={PixelGif} width={viewportSize.width}  alt="PixelGif"/>
             </div>
