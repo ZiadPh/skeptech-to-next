@@ -7,4 +7,67 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    & > :nth-child(3){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+}
+
+
+//devMo
+.dm{
+    background: rgb(37,54,48);
+    background: linear-gradient(180deg, #141A26 0%, #4A608C 100%);
+}
+
+
+//elevateX photos 
+.ex{    background: rgb(17,17,18);
+    background: linear-gradient(180deg, rgba(17,17,18,1) 0%, rgba(61,65,74,1) 50%, rgba(140,98,74,1) 100%);
+}
+.s2{
+    background-image: url(https://i.imgur.com/dPMfVW9.jpeg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    margin-bottom: 10vh;
+    width: 80vw;
+}
+.s2{
+    background-image: url(https://i.imgur.com/dPMfVW9.jpeg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    margin-bottom: 10vh;
+}
+
+.s3{
+    background-image: url(https://i.imgur.com/itlYIlt.png);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+
+    width: 80vw; 
+}
+
+.s4{
+    background-image: url(https://i.imgur.com/NLLPezo.png);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+
+    width: 80vw; 
+}
+
+
+//Pixel 11
+.p11wrap{
+    background-color: #36332B;
 }
