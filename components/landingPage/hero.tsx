@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
 import GSAP from 'gsap'
-import Logo from '../components/logo'
+import Logo from '../logo'
 
 const Hero = React.forwardRef<HTMLDivElement>((props, ref) => {
   const title = useRef(null)

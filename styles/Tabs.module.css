@@ -1,76 +1,53 @@
-/* styles/Tabs.module.css */ 
-.tab{
+/* Tab styling */
+.tab {
   display: flex;
   flex-direction: column;
   user-select: none;
+}
 
-}  
+/* Hover effects */
+.tab1:hover {
+  transition: ease-in-out 0.1s;
+  text-shadow: 0px 12px 12px rgba(0, 255, 254, 0.60);
+}
+.tab2:hover {
+  transition: ease-in-out 0.1s;
+  text-shadow: 0px 12px 12px rgba(255, 0, 0, 0.60);
+}
+.tab3:hover {
+  transition: ease-in-out 0.1s;
+  text-shadow: 0px 12px 12px rgba(42, 255, 0, 0.70);
+}
 
-  
-  .tab1:hover {
-    transition: ease-in-out 0.1s;
-    text-shadow: 0px 12px 12px rgba(0, 255, 254, 0.60);
-  }
-  .tab1.activeTab{
-    .bottomLine{
-      transition: ease-in-out 0.5s;
-      border-radius: 50%;
-      margin-top: 2vh;
-      margin-bottom: -1.5vh;
-      height: 1vw;
-      width: 100%;
-      background-color: rgba(0, 255, 254, 0.60);
-      filter: blur(10px);
-      opacity: 1;
-    }
-  }
-  
-  
-  .tab2:hover {
-    transition: ease-in-out 0.1s;
-    text-shadow: 0px 12px 12px rgba(255, 0, 0, 0.60);
-  }
-  .tab2.activeTab{
-    .bottomLine{
-      transition: ease-in-out 0.5s;
-      border-radius: 50%;
-      margin-top: 2vh;
-      margin-bottom: -1.5vh;
-      height: 1vw;
-      width: 100%;
-      background-color: rgba(255, 0, 0, 0.60);
-      filter: blur(10px);
-    }
-  }
-  
-  .tab3:hover {
-    transition: ease-in-out 0.1s;
-    text-shadow: 0px 12px 12px rgba(42, 255, 0, 0.70);
-  }
-  .tab3.activeTab{
+/* Active tab styling */
+.activeTab .bottomLine {
+  transition: ease-in-out 0.5s;
+  border-radius: 50%;
+  margin-top: 2vh;
+  margin-bottom: -1.5vh;
+  height: 1vw;
+  width: 100%;
+  background-color: rgba(0, 255, 254, 0.60);
+  filter: blur(10px);
+  opacity: 1;
+}
 
-    .bottomLine{
-      transition: ease-in-out 0.5s;
-      border-radius: 50%;
-      margin-top: 2vh;
-      margin-bottom: -1.5vh;
-      height: 1vw;
-      width: 100%;
-      background-color: rgba(42, 255, 0, 0.70);
-      filter: blur(10px);
-    }
-  }
-  
-  .content {
-    opacity: 1;
-    
-    transition: opacity 0.5s ease; /* Adjust the duration and timing function as needed */
-  }
-  
-  .fadeIn {
-    opacity: 1;
-  }
-  
-  .fadeOut {
-    opacity: 0;
-  }
+/* Content display */
+.content {
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Smooth transition */
+  position: relative; /* Content stays in place */
+  visibility: visible;
+}
+
+.fadeIn {
+  opacity: 1;
+  visibility: visible;
+  position: relative; /* Keeps the content in normal flow */
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute; /* Hides the content but keeps it in the DOM */
+}

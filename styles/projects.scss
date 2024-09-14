@@ -1,6 +1,6 @@
 
 .projects-wrapper{
-    height:100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,8 +15,9 @@
         max-width: 100vw; /* Adjust as needed */
         color: #c6c2bb;
         margin: auto;
-        gap: 10vh;
+        gap: 6vh;
         margin-top: 4vh;
+        overflow: hidden;
 
 
         .tabs {
@@ -101,23 +102,21 @@
     img{
         width: 35vw;
         height: auto;
-        display: block;
         position: absolute;
         opacity: 0;
         right: calc(6vw - 20px);
-        top: 125vh;
+        top: -10vh;
         transition: opacity 0.5s ease;
     }
     .projects-description{
         color: $primary-color;
         width: 30vw;
-        display: block;
         position: fixed;
         opacity: 0;
         text-align: right;
-        font-size: 14px;
+        @include baseS;
         right: 2rem;
-        bottom:2vh;
+        bottom:4vh;
         transition: opacity 0.5s ease;
         transition-delay: 0.1s;
         
@@ -167,9 +166,9 @@
 
     }
 }
-.projects-description{
-    width: 50vw;
-}
+// .projects-description{
+//     width: 50vw;
+// }
 }
 
 .tab-text{
@@ -178,3 +177,115 @@
     font-weight: 500;
 
 }
+
+
+.skepTechTV {
+    padding:0 8vw;
+ 
+  
+  
+.TV-flex{
+    margin-top: 8vh;
+    display: flex;
+    gap:8vw;
+    .featuredVideo {
+    @include base;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      & > h3{
+        @include titleS;
+        margin-bottom:2vh;
+    }
+      .videoContainer {
+        display: flex;
+        flex-direction: column;
+
+  
+        img {
+          width: 100%;
+          max-width: 500px;
+          height: 20vh;
+          object-fit: cover
+          ;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+        }
+  
+        .videoDescription {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            & > h4{
+                @include baseL;
+                margin-bottom: 1.5vh;
+            }
+          .watchButton {
+            width: fit-content;
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #0070f3;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            align-self: center;
+            &:hover {
+              background-color: #005bb5;
+            }
+          }
+        }
+      }
+    }
+      .whySkepTech {
+        @include base;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        & > h3{
+            @include titleS
+        }
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 1rem;
+  
+          strong {
+            color: $highlight-color;
+          }
+        }
+      }
+    }    
+}
+
+  
+
+  
+    .subscribe {
+      margin-top: 4vh;
+      @include base;
+      & > h3{
+        @include titleS;
+        margin-bottom:2vh;
+    }
+      .subscribeButton {
+        margin-top: 4vh;
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: #d32f2f;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+  
+        &:hover {
+          background-color: #a52828;
+        }
+      }
+    }
+  }
+  
