@@ -114,6 +114,7 @@ const currentPage = useCurrentPage();
         <title>SkepTech | Home</title>
         <meta property="og:title" content="SkepTech | Home" key="title" />
         <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
       </Head>
         <div className='noise'/>
