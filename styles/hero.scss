@@ -5,6 +5,9 @@
     justify-content: flex-start;
     height: 100vh;
 }
+.hero-logo{
+    width: 20vw;
+}
 .img-container{
     height: 40vw;
     position: absolute;
@@ -15,7 +18,7 @@
 
 }
 .right{
-    margin-top: 30vh;
+    margin-top: 20vh;
     z-index: 1;
     margin-left: 10vw;
     max-width: 90vw;
@@ -33,27 +36,30 @@
 // }
 .title{
     color: $primary-color;
-    font-size: clamp(48px, 14vw, 320px);
-    margin-bottom: 2rem;
+    @include DisplayM;
+    // margin-bottom: 2rem;
     opacity: 0;
-    text-transform: uppercase;
+    font-family: 'NR';
     transform: translateY(100px);
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .quote{
     color: $primary-color;
-    font-size: clamp(12px, 4vw, 40px);
-    opacity: 0;
+    @include baseXL;
+   opacity: 0;
+    font-family: 'IBM Plex Mono', monospace;
     transform: translateY(100px);
-    letter-spacing: 7px;
 }
 .highlight{
     color: $highlight-color;
 }
 .hey{
     overflow: hidden;
-    padding-bottom: 5px;
+    padding-bottom: 4vh;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -61,11 +67,23 @@
       Device = Most of the Smartphones Mobiles (Portrait)
       Screen = 320px to 479px
     */
-
+    .hero-container{
+        align-items: center;
+        justify-content: center;
+    }
+    .right{
+        margin-left: 0;
+    }
+    .hey{
+        flex-direction: column;
+    }
+    .hero-logo{
+        width: 60vw;
+    }
     .quote{
         letter-spacing: 0;
         line-height: 150%;
         max-width: 85vw;
-        @include baseXXL;
+        // @include baseL;
     }
   }

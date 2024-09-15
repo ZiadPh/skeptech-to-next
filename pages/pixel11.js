@@ -14,7 +14,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 import Head from "next/head"
-
+import PHeader from "../components/projectHeader"
 
 export default function pixel() {
 
@@ -50,6 +50,8 @@ return(
         <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
 
       </Head>
+      <div className='noise'/>
+
         <Nav />
         <m.div
         initial="pageInitial"
@@ -70,37 +72,16 @@ return(
         },
         }}
         transition={{ duration: 0.5 }}
-        >
-            <div className="section-1">
-                <div> 
-                {/* Section Margin 68% */}
-                    <div>
-                    {/* Container for image and Title wrapper */}
-                        <Image src={Pixel3D}  />    
-                        <div>
-                        {/*Title wrapper */}
-                            <div>#01</div>
-                            <ul>
-                                <li>
-                                    <div>Pixel10 Studio: Website</div>
-                                    <div>_</div>
-                                </li>
-                                <li>Service: Website UI Design and Development</li>
-                                <li>Client Name: Mohamed Ibrahim</li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div>
-                    {/* Container for first Paragraph*/}
-                        <div>
-                            Background:
-                        </div>
-                        <div>
-                            Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        >   
+            <PHeader 
+            imgsrc={Pixel3D}
+            imgalt={"Interior of Pixel10 Studio"} 
+            number={"03"} 
+            title={"Pixel10 Studio: Website"}
+            service={"Website UI Design and Development"}
+            client={"Pixel10 Studio"}
+            background={"Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors."}
+            />
             <div className="fs-image">
                 <Image className="gif" src={PixelGif} width={viewportSize.width}  alt="PixelGif"/>
             </div>
@@ -143,8 +124,7 @@ return(
                 </div>
 
             </div>
-            <div className="section-4 ">
-                <h1>Client References:</h1>
+                <h1 className="Title">Client References:</h1>
                 <div className="Carousel">
                     <Carousel dynamicHeight={true} width={"100%"} >
                         <div>
@@ -161,29 +141,23 @@ return(
                         </div>
                     </Carousel>
                 </div>
-
-            </div>
-            <div className="section-5">
-                <div className="s5-wrapper">
-                    <h1>Design Aspects</h1>
+            
                     
-                    <h2>1. Typography and Fonts</h2>
-                    <div className="fonts">
+                    <h2 className="Title">1. Typography and Fonts</h2>
+                    <div className="fulltwo">
                         <Image src={Font1} alt="Null"/>
                         <Image src={Font2} alt="Null"/>
                     </div>
 
-                    <h2>2. Color</h2>
-                    <div className="fonts">
-                        <Image src={Color}/>
-                    </div>
-                    <h2>3. Layout and Prototype</h2>
+                    <h2 className="Title">2. Color</h2>
+                        <Image className="vid" src={Color}/>
+
+                    <h2 className="Title">3. Layout and Prototype</h2>
                     {/* Figma Embed */}
                     <iframe className="embed" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrvQX9LdcjoJEjDmwcguS2N%2FPixel-10%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-254%26viewport%3D137%252C449%252C0.11%26t%3DLLV5Di45F6bm9d6C-1%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A254%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
+                    <div className="fifthEmpty"/>
 
 
-                </div>
-            </div>
             <Footer/>
         </m.div>
     </div>

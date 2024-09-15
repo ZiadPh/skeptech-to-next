@@ -2,18 +2,10 @@
 import Nav from "../components/nav"
 import Image from "next/image"
 import DM3D from '../assets/elevatex.png'
-import DPLT from '../assets/ssd.png'
-import NPLT from '../assets/ssn.png'
-import D3D from '../assets/day3d.png'
-import N3D from '../assets/night3d.png'
-import room from '../assets/realRoom.jpg'
-import s3d from '../assets/setup3d.png'
-import arr from '../assets/aurora.png'
-import MI from '../assets/MI.png'
-import rlr from '../assets/ruler.png'
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 import Head from "next/head"
+import PHeader from "../components/projectHeader"
 
 export default function pixel() {
 
@@ -28,6 +20,8 @@ return(
         <meta property='og:image'  content='https://i.imgur.com/B7gRm8t.png'/>
 
       </Head>
+      <div className='noise'/>
+
         <Nav />
         <m.div
         initial="pageInitial"
@@ -49,35 +43,15 @@ return(
         }}
         transition={{ duration: 0.5 }}
         >
-            <div className="section-1">
-                <div> 
-                {/* Section Margin 68% */}
-                    <div>
-                    {/* Container for image and Title wrapper */}
-                        <Image src={DM3D} alt="null" />    
-                        <div>
-                        {/*Title wrapper */}
-                            <div>#02</div>
-                            <ul>
-                                <li>
-                                    <div>Elevate X: Website</div>
-                                    <div>_</div>
-                                </li>
-                                <li>Service: Website UI Design and Development</li>
-                                <li>Client Name: Elevate X Marketing Agency</li>
-                            </ul> 
-                        </div>
-                    </div>
-                    <div>
-                    {/* Container for first Paragraph*/}
-                        <div>
-                            Summary:
-                        </div>
-                        <div>
-                        For ElevateX, we undertook the challenge of redesigning their website to reflect their innovative approach and provide a seamless user experience. Our focus was on creating a visually captivating design with streamlined navigation and clear calls-to-action. By incorporating interactive elements and ensuring responsiveness across devices, we aimed to elevate ElevateX's online presence.</div>
-                    </div>
-                </div>
-            </div>
+            <PHeader 
+            imgsrc={DM3D}
+            imgalt={"Elevate X Storefront"} 
+            number={"02"} 
+            title={"Elevate X: Website"}
+            service={"Website UI Design and Development"}
+            client={"Elevate X Marketing Agency"}
+            background={"For ElevateX, we undertook the challenge of redesigning their website to reflect their innovative approach and provide a seamless user experience. Our focus was on creating a visually captivating design with streamlined navigation and clear calls-to-action. By incorporating interactive elements and ensuring responsiveness across devices, we aimed to elevate ElevateX's online presence."}
+            />
             <div className=" s2 "/>
             <div className="text-column">
                 <div>

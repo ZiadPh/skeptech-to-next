@@ -6,7 +6,9 @@
     z-index: 10;
     justify-content:space-between;
     margin: 1vw 2vw;
+    font-family: "IBM Plex Mono";
 }
+
 .clock{
   pointer-events: none;
   justify-self: center;
@@ -15,11 +17,13 @@
 .pages {
  display: flex;
  gap: 2rem;
+ 
   li{
     button{
       @extend %link;
       color: #c6c2bb;
       opacity: 0.5;
+      font-family: "IBM Plex Mono";
       transition: ease-in-out 0.15s;
       &:hover{
         opacity: 1;
@@ -105,7 +109,7 @@
       Screen = 320px to 479px
     */
 
-    .pages{
+    .clock{
       display: none;
     }
   }
