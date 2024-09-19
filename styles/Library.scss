@@ -134,6 +134,7 @@
 .fullBody{
     width: 68vw;
     @include base;
+    line-height: 150%;
     @media (orientation: portrait) {
         width: 90vw;
     }

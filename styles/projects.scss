@@ -107,6 +107,9 @@
         right: calc(6vw - 20px);
         top: -10vh;
         transition: opacity 0.5s ease;
+        @media (max-width: 768px) {
+          display: none;
+      }
     }
     .projects-description{
         color: $primary-color;
@@ -119,6 +122,9 @@
         bottom:4vh;
         transition: opacity 0.5s ease;
         transition-delay: 0.1s;
+        @media (max-width: 768px) {
+          display: none;
+      }
         
         .project-title{
             font-size:12px;

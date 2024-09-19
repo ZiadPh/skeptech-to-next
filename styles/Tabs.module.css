@@ -27,7 +27,6 @@
   margin-bottom: -1.5vh;
   height: 1vw;
   width: 100%;
-  background-color: rgba(0, 255, 254, 0.60);
   filter: blur(10px);
   opacity: 1;
 }
