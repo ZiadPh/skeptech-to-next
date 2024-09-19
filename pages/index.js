@@ -117,8 +117,10 @@ const currentPage = useCurrentPage();
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
       </Head>
+        
         <div className='noise'/>
         <div className='noise'/>
+        <div className='bg'/>
         <Nav currentPage={currentPage} />
         <m.div
         initial={{opacity:0}}
