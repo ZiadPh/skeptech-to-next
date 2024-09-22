@@ -2,7 +2,7 @@ import Nav from "../components/nav"
 import Image from "next/image"
 import Pixel3D from '../assets/Pixel20.png'
 import PixelGif from '../assets/PixelGif.gif'
-import Cref1 from '../assets/ref1.png'
+import Cref1 from '../assets/ref1.jpeg'
 import Cref2 from '../assets/ref2.png'
 import Cref3 from '../assets/ref3.png'
 import Font1 from '../assets/font1.png'
@@ -129,7 +129,7 @@ return(
                     <Carousel dynamicHeight={true} width={"100%"} >
                         <div>
                             <Image src={Cref1} alt="null"/>
-                            <p className="legend">Eleven V visualisation studio</p>
+                            <p className="legend">RustArch Architectural studio</p>
                         </div>
                         <div>
                             <Image src={Cref2} alt="null" />
