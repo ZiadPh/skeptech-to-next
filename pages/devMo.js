@@ -10,6 +10,7 @@ import s3d from '../assets/setup3d.png'
 import arr from '../assets/aurora.png'
 import MI from '../assets/MI.png'
 import rlr from '../assets/ruler.png'
+import mockup from '../assets/devmockup.webp'
 import { motion as m } from 'framer-motion'
 import Footer from "../components/Footer"
 import Head from "next/head"
@@ -107,7 +108,6 @@ return(
                             Ensure that the website is search engine optimized, enabling better visibility in relevant search results and attracting organic traffic.                    </li>
                     </ul>
                 </div>
-
             </div>                   
                     <h2 className="Title">1. 3D Model</h2>
                     <div className="fulltwo">
@@ -130,7 +130,7 @@ return(
                         </div>
                     </div>
                     <p className="fullBody">Most of the colours were mainly dependent on the colours of the practical lighting in both day and night themes in the 3D model and were made to serve the same dreamy look.<br/>
-For  the Text and UI elements the choice of Beige and Black was mainly to serve the text readability throughout an interchanging Background.</p>
+                    For  the Text and UI elements the choice of Beige and Black was mainly to serve the text readability throughout an interchanging Background.</p>
 
                     <h2 className="Title">4. Fonts and UI Elements</h2>
                     <div className="grid">                        
@@ -167,7 +167,7 @@ For  the Text and UI elements the choice of Beige and Black was mainly to serve 
                         />
                         <p className="fullBody">Text Reveal Animation: This was mainly intended to give off more of this digital look takes up a massive part of the client&apos;s lifestyle, not to mention how it synchronises with the change of the elements on the screens in the 3D model.</p>
                         <h2 className="Title">6. Final Results</h2>
-                
+                        <Image className="vid" src={mockup} alt="null"/>
                     <p className="fullBody">The development of the Devmo portfolio website showcases the intersection of creative design and client-centric functionality. Starting with a 3D model inspired by the client's own setup, we meticulously crafted the environment to align with their vision, incorporating striking lighting effects and atmospheric design elements. The Aurora UI serves as a perfect backdrop, blending the dreamy ambiance with practical lighting, while color choices reflect both day and night themes. Smooth animations elevate the overall experience, transitioning effortlessly between themes and bringing digital elements to life.</p>
                     <p className="fullBody">Explore the final result on  <a href="https://dev-mo.vercel.app/" style={{ fontWeight: 600}}><u>DevMo Portfolio Website.</u></a></p>
                     <div className="fifthEmpty"/>
