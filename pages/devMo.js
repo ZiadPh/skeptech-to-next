@@ -58,6 +58,7 @@ return(
             title={"DevMohamed: Website"}
             service={"Website UI Design and Development"}
             client={"Mohamed Ibrahim"}
+            result={"https://dev-mo.vercel.app/"}
             background={"The project involves the creation of an interactive and engaging online curriculum vitae (CV) that showcases a developer's workspace using 3D visualization. This virtual experience will enable visitors to explore the developer's environment, providing an immersive insight into their work area, including details of the computer setup and any relevant gadgets or tools."}
             />
             <div className="fs-media">

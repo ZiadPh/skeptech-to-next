@@ -50,6 +50,7 @@ return(
             title={"Elevate X: Website"}
             service={"Website UI Design and Development"}
             client={"Elevate X Marketing Agency"}
+            result={"https://elevate-x-theta.vercel.app/"}
             background={"For ElevateX, we undertook the challenge of redesigning their website to reflect their innovative approach and provide a seamless user experience. Our focus was on creating a visually captivating design with streamlined navigation and clear calls-to-action. By incorporating interactive elements and ensuring responsiveness across devices, we aimed to elevate ElevateX's online presence."}
             />
             <div className=" s2 "/>

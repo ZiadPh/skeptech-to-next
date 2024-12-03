@@ -10,6 +10,8 @@ import Link from 'next/link'
 import Tabs from './tabs'
 import SkepTechTV from './skeptechTV'
 import thumb from '../../assets/Thumb.png'
+import bw from '../../assets/BlackWhale.png'
+import Lumi from '../../assets/Lumi.png'
 
 const projects = React.forwardRef((props, ref ) => {
   //Pass the handletab click props
@@ -66,6 +68,20 @@ const projects = React.forwardRef((props, ref ) => {
       link: '/pixel11',
       dTitle: 'DEV / UX',
       description: 'Pixel10 Studio website is considered our very first commercial project which we take pride in participating to help a fellow creative studio to curate and showcase their work on the internet.'
+    },
+    {
+      name: 'BlackWhale Immigration',
+      url: bw,
+      link: '/blackwhale',
+      dTitle: 'DEV / UX',
+      description: 'Crafting a sleek, intuitive Website design to empower global transitions.'
+    },
+    {
+      name: 'LumiFriends: E-commerce',
+      url: Lumi,
+      link: '/lumi',
+      dTitle: 'DEV / UX',
+      description: 'LumiFriends website is considered our very first ecommerce project which we take pride in participating to help a lamps manufacturer to sell their products online worldwide through shopify.'
     }
   ]
   //-----------------------------------------------------------------------------------------------

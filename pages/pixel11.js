@@ -80,6 +80,7 @@ return(
             title={"Pixel10 Studio: Website"}
             service={"Website UI Design and Development"}
             client={"Pixel10 Studio"}
+            result={"https://pixel10studio.com/"}
             background={"Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors."}
             />
             <div className="fs-image">

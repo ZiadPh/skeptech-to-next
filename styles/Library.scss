@@ -1,4 +1,4 @@
-// <-----------------------Full Scale Components ----------------------------->
+ // <-----------------------Full Scale Components ----------------------------->
 
 .section-1{
     display: flex;
@@ -34,6 +34,19 @@
             @media (orientation: portrait) {
         flex-direction: column;
             }
+            & > a{
+                position: absolute;
+                left: 50%;
+                top: 30vh;
+                color: black;
+                border-radius: 0.25rem;
+                transform: translate(-50% , 50%);
+                @include base;
+                background-color: rgba($primary-color, $alpha: 0.7);
+                padding: 0.5rem 1rem;
+
+
+            }
             & > img{
                 position: absolute;
                 width: 36vw;
@@ -43,7 +56,6 @@
                 z-index: 0;
                 @media (orientation: portrait) {
                     position:static;
-                    top: 0;
                     margin-top: 40vh;
                     width: 90vw;
                 }
@@ -288,15 +300,17 @@
 .fulltwo{
     display: flex;
     width: 100vw;
+
     align-items: center;
     @media (orientation: portrait) {
         flex-direction: column;
     }
     & > img{
-        height: 80vh;
+        height: 80vh;    min-width: 50vw;
         object-fit: cover;
         @media (orientation: portrait) {
            width: 90%;
+           height: 50%;
         }
     }
 }
