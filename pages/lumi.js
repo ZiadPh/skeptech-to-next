@@ -9,7 +9,7 @@ import Logo from '../assets/LumiLogo.png'
 import card from '../assets/LumiCard.png'
 import b1 from '../assets/LumiButton.png'
 import b2 from '../assets/LumiButton2.png'
-import mockup from '../assets/Lumockup.png'
+import mockup from '../assets/lumockup.png'
 import Lumi from '../assets/Lumi.png'
 import LumiC from '../assets/LumiC.png'
 import { useState , useEffect } from "react"
