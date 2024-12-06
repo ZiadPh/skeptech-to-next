@@ -2,12 +2,13 @@ import Nav from "../components/nav"
 import Image from "next/image"
 import Pixel3D from '../assets/Pixel20.png'
 import PixelGif from '../assets/PixelGif.gif'
-import Cref1 from '../assets/ref1.png'
+import Cref1 from '../assets/ref1.jpeg'
 import Cref2 from '../assets/ref2.png'
 import Cref3 from '../assets/ref3.png'
 import Font1 from '../assets/font1.png'
 import Font2 from '../assets/font2.gif'
 import Color from '../assets/p11-color.png'
+import mockup from '../assets/p11mockup.webp'
 import { useState , useEffect } from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -80,7 +81,6 @@ return(
             title={"Pixel10 Studio: Website"}
             service={"Website UI Design and Development"}
             client={"Pixel10 Studio"}
-            result={"https://pixel10studio.com/"}
             background={"Pixel10 Studio is a startup agency specializing in providing high-quality Architectural Visualisation, Animation, Virtual Reality, and Interior Design services. With a team of talented professionals, they have successfully executed various projects for clients in the real estate, construction, and interior design sectors."}
             />
             <div className="fs-image">
@@ -130,7 +130,7 @@ return(
                     <Carousel dynamicHeight={true} width={"100%"} >
                         <div>
                             <Image src={Cref1} alt="null"/>
-                            <p className="legend">Eleven V visualisation studio</p>
+                            <p className="legend">RustArch Architectural studio</p>
                         </div>
                         <div>
                             <Image src={Cref2} alt="null" />
@@ -158,7 +158,7 @@ return(
                     <iframe className="embed" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrvQX9LdcjoJEjDmwcguS2N%2FPixel-10%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-254%26viewport%3D137%252C449%252C0.11%26t%3DLLV5Di45F6bm9d6C-1%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A254%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
 
                     <h2 className="Title">3. Final Results</h2>
-                
+                    <Image className="vid" src={mockup}/>
                 <p className="fullBody">The collaboration with Pixel10 Studio resulted in a website that mirrors the precision and creativity of their architectural and design services. Every visual element is carefully designed to highlight their expertise in Architectural Visualization, Animation, Virtual Reality, and Interior Design. Through clean layouts, immersive visuals, and subtle animations, the site effectively showcases their portfolio and talents. The user interface is both professional and engaging, reflecting the high standards that Pixel10 Studio upholds in every project.</p>
                 <p className="fullBody">Dive into the final experience and explore their world-class work on the <a href="https://pixel10studio.com/" style={{ fontWeight: 600}}><u>Pixel10 Studio website.</u></a></p>
                 <div className="fifthEmpty"/>

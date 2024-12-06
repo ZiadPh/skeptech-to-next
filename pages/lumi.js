@@ -3,7 +3,7 @@ import Image from "next/image"
 import PixelGif from '../assets/PixelGif.gif'
 import Cref1 from '../assets/LumiRef1.png'
 import Cref2 from '../assets/LumiRef2.png'
-import Cref3 from '../assets/LumiRef3.jpg'
+import Cref3 from '../assets/LumiRef3.png'
 import Font1 from '../assets/Poppins.png'
 import Logo from '../assets/LumiLogo.png'
 import card from '../assets/LumiCard.png'

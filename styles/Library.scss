@@ -235,11 +235,11 @@
 }
 // <-----------------------Media ----------------------------->
 .carousel {
-    margin: auto;
+    max-width: 90vw;
     .slide img{
         max-height: clamp(300px, 80vh , 900px);  /* change this to whatever you want */
         width: auto;
-        object-fit: cover;
+        object-fit: contain;
     }
     .legend{
         width: 50%;
@@ -300,14 +300,14 @@
 
 .fulltwo{
     display: flex;
-    width: 100vw;
+    width: 90vw;
 
     align-items: center;
     @media (orientation: portrait) {
         flex-direction: column;
     }
     & > img{
-        height: 80vh;    min-width: 50vw;
+        height: 80vh;    min-width: 45vw;
         object-fit: cover;
         @media (orientation: portrait) {
            width: 90%;
