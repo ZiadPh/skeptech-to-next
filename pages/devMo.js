@@ -166,7 +166,6 @@ return(
 
                         />
                         <p className="fullBody">Text Reveal Animation: This was mainly intended to give off more of this digital look takes up a massive part of the client&apos;s lifestyle, not to mention how it synchronises with the change of the elements on the screens in the 3D model.</p>
-
                         <h2 className="Title">6. Final Results</h2>
                         <Image className="vid" src={mockup} alt="null"/>
                     <p className="fullBody">The development of the Devmo portfolio website showcases the intersection of creative design and client-centric functionality. Starting with a 3D model inspired by the client's own setup, we meticulously crafted the environment to align with their vision, incorporating striking lighting effects and atmospheric design elements. The Aurora UI serves as a perfect backdrop, blending the dreamy ambiance with practical lighting, while color choices reflect both day and night themes. Smooth animations elevate the overall experience, transitioning effortlessly between themes and bringing digital elements to life.</p>
